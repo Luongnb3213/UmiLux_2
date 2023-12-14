@@ -11,7 +11,7 @@
   padding: 8px 0px;
 }
 .header-top-list {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #364A9B;
 }
 .header_top span {
   display: inline-block;
@@ -53,6 +53,9 @@
   font-family: General Sans;
   font-weight: 500;
   word-wrap: break-word;
+}
+.header_mid_logo{
+    cursor: pointer;
 }
 .header_mid_input .searchBar svg {
   top: 50%;
