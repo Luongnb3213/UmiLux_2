@@ -21,6 +21,9 @@
   font-weight: 400;
   word-wrap: break-word;
 }
+.header_top_icon{
+    margin-left: 8px;
+}
 .header_top span a{
     text-decoration: none;
     color: white;
@@ -57,7 +60,7 @@
   transform: translateY(-50%);
 }
 .header_mid {
-  padding: 30px 0;
+  padding: 25px 0;
 }
 .header_mid_input button {
   color: white;
@@ -160,4 +163,9 @@
 }
 .header_mid_right_item{
     cursor: pointer;
+}
+.header_bot_right:hover .header_bot_right_text{
+    color: #00a2c2;    
+    cursor: pointer;
+
 }
