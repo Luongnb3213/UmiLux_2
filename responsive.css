@@ -1,0 +1,39 @@
+/* mobile */
+
+
+
+
+@media (max-width: 1199px) {
+    .header-top-list {
+        display: none;
+    }
+
+    .header_bot {
+        display: none;
+    }
+
+    .header_mid_input .searchBar svg {
+        left: 3%;
+    }
+    .header_mid{
+        padding: 15px 0px;
+    }
+}
+
+/* tablet */
+@media only screen and (min-width: 740px) and (max-width: 1023px) {}
+
+
+@media (max-width:739px) {
+
+    .main-img-item h1{
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .main-img-item p{
+        font-size: 13px;
+    }
+    .header_mid_input .searchBar svg{
+        left: 8%;
+    }
+}
