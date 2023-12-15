@@ -14,7 +14,8 @@
 }
 
 .header_top {
-  padding: 8px 0px;
+  line-height: 1;
+  padding: 10px 0px;
 }
 
 .header-top-list {
@@ -103,6 +104,7 @@
 }
 
 .header_text p {
+  line-height: 1;
   margin-bottom: 0px;
   color: var(--white-color);
   font-size: 14px;
@@ -112,6 +114,7 @@
 }
 
 .header_text p:nth-child(1) {
+  line-height: 11px;
   font-size: 11px;
   opacity: 0.5;
 }
@@ -150,6 +153,9 @@
 
 .header_bot_left_text {
   margin-left: 10px;
+}
+.header_bot_left_item:nth-child(1){
+  padding-left: 0px;
 }
 
 .header_bot_left_item {
@@ -270,7 +276,7 @@
 }
 
 .product_item {
-  height: 200px;
+  min-height: 200px;
   padding: 36px 30px 36px 30px;
   border-radius: 5px;
 }
@@ -294,13 +300,12 @@
 .play-station {
   background: url('./image/play_station.jpg') no-repeat center;
   background-size: cover;
-  transform-origin: top right;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .play-station:hover {
   transform: scale(1.1);
-  /* Phóng to 20% và di chuyển sang phải 20% */
+  background-position: center right;
 }
 
 .phone {
@@ -332,6 +337,7 @@
   transition: transform linear 0.3s;
   margin: 0 auto;
 }
+
 .product_image_item-text p:nth-child(1) {
   text-align: center;
   color: var(--black-color);
@@ -343,7 +349,7 @@
 }
 
 .product_image_item:nth-child(2) p:nth-child(1) {
-  
+
   color: var(--secondry-color);
 }
 
@@ -411,9 +417,11 @@
   font-weight: 500;
   word-wrap: break-word;
 }
-.top_deal_product_item_img{
+
+.top_deal_product_item_img {
   margin-bottom: 10px;
 }
+
 .top_deal_product_item_text p {
   margin-bottom: 0px;
 }
@@ -463,6 +471,172 @@
   left: 0;
   top: 0;
 }
-.name:hover{
+
+.name:hover {
   color: var(--secondry-color);
+}
+
+.home-item-list,.page-item-list,.blog-item-list {
+  width: 300%;
+  top: 56px;
+  padding: 10px 0px;
+  right: 0;
+  left: 0;
+  z-index: 6;
+  visibility: hidden;
+  background-color: white;
+  transition: all linear 0.2s;
+  opacity: 0;
+}
+
+.home-item-list::before,.page-item-list::before,.blog-item-list::before {
+  position: absolute;
+  top: -20px;
+  content: "";
+  height: 36px;
+  width: 50%;
+}
+.page:hover .page-item-list{
+  opacity: 1;
+  visibility: visible;
+  top: 40px;
+}
+.blog:hover .blog-item-list{
+  opacity: 1;
+  visibility: visible;
+  top: 40px;
+}
+.home-item {
+  transition: all linear 0.2s;
+  padding: 10px 48px 10px 35px;
+}
+
+.home_item_link {
+  text-decoration: none;
+  color: #555;
+}
+
+.home_item_link:hover {
+  color: #555;
+}
+
+.home-item:hover {
+  transform: translateX(10px);
+}
+
+.home:hover .home-item-list {
+  opacity: 1;
+  visibility: visible;
+  top: 40px;
+}
+
+.home_item_link_text {
+  color: var(--white-color);
+  display: inline-block;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 6px 10px !important;
+  border-radius: 20px;
+  margin-left: 7px !important;
+  background-color: #E02F60;
+}
+.product:hover .product-item-list{
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+.shop-item-list,.product-item-list {
+  opacity: 0;
+  visibility: hidden;
+  background-color: white;
+  left: 0;
+  right: 0;
+  top: 110%;
+  padding: 30px 0px;
+  transition: all linear 0.2s;
+}
+.shop-item-list::before,.product-item-list::before{
+  top: -15px;
+  content: "";
+  height: 30px;
+  width: 50%;
+  position: absolute;
+}
+.shop:hover .shop-item-list {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+
+.shop_main_text {
+  color: var(--black-color);
+  font-weight: 600;
+  font-family: var(--primary-font);
+}
+
+.shop_main_item:nth-child(1) .shop_main_link {
+  padding-top: 16px;
+}
+
+.shop_main_link:hover {
+  transform: translateX(10px);
+  color: #555;
+}
+
+.shop_main_link {
+  transition: all linear 0.2s;
+  display: block;
+  padding: 6px 0px;
+  text-decoration: none;
+  color: #555;
+}
+
+.shop-item_img {
+  overflow: hidden;
+}
+
+.shop-item img {
+  transition: all linear 0.2s;
+  height: 228px;
+  border-radius: 12px;
+}
+
+.btn_shop {
+  transition: all linear 0.2s;
+  transform: translateY(-50%);
+  font-weight: 600;
+  border-radius: 30px;
+  top: 80%;
+  left: 22%;
+  color: var(--black-color);
+  outline: none;
+  border: none;
+  background-color: var(--white-color);
+  padding: 12px 11px;
+}
+
+.shop-item:hover .lap {}
+
+.btn_shop:hover {
+  color: white;
+  background-color: var(--secondry-color);
+}
+
+.lap,
+.smart_tv {
+  display: block;
+  transition: all linear 0.5s;
+  height: 100%;
+  border-radius: 12px;
+  background: url(./image/lap&PC.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.smart_tv {
+  background-image: url(./image/cate1.jpg);
+}
+.shop-item.product-item{
+    width: calc(( 100% - 30px ) / 5);
 }
