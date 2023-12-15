@@ -46,8 +46,9 @@
     </div>
     <div class="container">
       <div class="header_mid">
+        <!-- mobile + tablet -->
         <div class="d-flex justify-content-between align-items-center d-xl-none mb-2">
-          <div class="navbar px-2">
+          <div class="navbar_mobile">
             <svg width="22" height="14" viewBox="0 0 18 12" class="menu" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M1.5 7H16.5C16.7344 7 16.9297 6.92188 17.0859 6.76562C17.2552 6.59635 17.3398 6.39453 17.3398 6.16016C17.3398 5.9388 17.2552 5.75 17.0859 5.59375C16.9297 5.42448 16.7344 5.33984 16.5 5.33984H1.5C1.26562 5.33984 1.0638 5.42448 0.894531 5.59375C0.738281 5.75 0.660156 5.9388 0.660156 6.16016C0.660156 6.39453 0.738281 6.59635 0.894531 6.76562C1.0638 6.92188 1.26562 7 1.5 7ZM1.5 2H16.5C16.7344 2 16.9297 1.92188 17.0859 1.76562C17.2552 1.59635 17.3398 1.39453 17.3398 1.16016C17.3398 0.938802 17.2552 0.75 17.0859 0.59375C16.9297 0.424479 16.7344 0.339844 16.5 0.339844H1.5C1.26562 0.339844 1.0638 0.424479 0.894531 0.59375C0.738281 0.75 0.660156 0.938802 0.660156 1.16016C0.660156 1.39453 0.738281 1.59635 0.894531 1.76562C1.0638 1.92188 1.26562 2 1.5 2ZM1.5 12H16.5C16.7344 12 16.9297 11.9219 17.0859 11.7656C17.2552 11.5964 17.3398 11.3945 17.3398 11.1602C17.3398 10.9388 17.2552 10.75 17.0859 10.5938C16.9297 10.4245 16.7344 10.3398 16.5 10.3398H1.5C1.26562 10.3398 1.0638 10.4245 0.894531 10.5938C0.738281 10.75 0.660156 10.9388 0.660156 11.1602C0.660156 11.3945 0.738281 11.5964 0.894531 11.7656C1.0638 11.9219 1.26562 12 1.5 12Z"
@@ -68,7 +69,7 @@
               </svg>
               <span class="number-item"> 5</span>
             </div>
-            <div class="position-relative">
+            <div class="position-relative me-2">
               <svg width="21" height="17" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="icon">
                   <path id="Vector"
@@ -86,6 +87,128 @@
             </div>
           </div>
 
+        </div>
+        <div class="layer">
+        </div>
+        <div class="navbar_item_list">
+          <div class="navbar_item_list_head d-flex align-items-center justify-content-between">
+            <div>
+              <a href=""><span>MENU</span></a>
+              <a href=""><span>CATEGORIES</span></a>
+            </div>
+
+            <span class="close">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="transform: translateY(-50%); margin-top: 20px">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </span>
+          </div>
+          <ul class="navbar_item_list_mobile list-unstyled ">
+            <li class="navbar_item_mobile">
+              <a class="navbar_item_mobile_link d-flex justify-content-between" href="">Home
+                <span class="nav_icon"><svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.46875 9.29688C1.34375 9.43229 1.1875 9.5 1 9.5C0.8125 9.5 0.65625 9.43229 0.53125 9.29688C0.395833 9.17188 0.328125 9.02083 0.328125 8.84375C0.328125 8.65625 0.395833 8.49479 0.53125 8.35938L4.0625 4.82812L0.53125 1.29688C0.395833 1.17188 0.328125 1.02083 0.328125 0.84375C0.328125 0.65625 0.395833 0.494792 0.53125 0.359375C0.65625 0.234375 0.8125 0.171875 1 0.171875C1.1875 0.171875 1.34375 0.234375 1.46875 0.359375L5.46875 4.35938C5.60417 4.49479 5.67188 4.65625 5.67188 4.84375C5.67188 5.02083 5.60417 5.17188 5.46875 5.29688L1.46875 9.29688Z"
+                      fill="#111111" />
+                  </svg></span>
+              </a>
+            </li>
+            <li class="navbar_item_mobile">
+              <a class="navbar_item_mobile_link d-flex justify-content-between" href="">Shop
+                <span class="nav_icon"><svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.46875 9.29688C1.34375 9.43229 1.1875 9.5 1 9.5C0.8125 9.5 0.65625 9.43229 0.53125 9.29688C0.395833 9.17188 0.328125 9.02083 0.328125 8.84375C0.328125 8.65625 0.395833 8.49479 0.53125 8.35938L4.0625 4.82812L0.53125 1.29688C0.395833 1.17188 0.328125 1.02083 0.328125 0.84375C0.328125 0.65625 0.395833 0.494792 0.53125 0.359375C0.65625 0.234375 0.8125 0.171875 1 0.171875C1.1875 0.171875 1.34375 0.234375 1.46875 0.359375L5.46875 4.35938C5.60417 4.49479 5.67188 4.65625 5.67188 4.84375C5.67188 5.02083 5.60417 5.17188 5.46875 5.29688L1.46875 9.29688Z"
+                      fill="#111111" />
+                  </svg></span>
+              </a>
+            </li>
+            <li class="navbar_item_mobile">
+              <a class="navbar_item_mobile_link d-flex justify-content-between" href="">Product
+                <span class="nav_icon"><svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.46875 9.29688C1.34375 9.43229 1.1875 9.5 1 9.5C0.8125 9.5 0.65625 9.43229 0.53125 9.29688C0.395833 9.17188 0.328125 9.02083 0.328125 8.84375C0.328125 8.65625 0.395833 8.49479 0.53125 8.35938L4.0625 4.82812L0.53125 1.29688C0.395833 1.17188 0.328125 1.02083 0.328125 0.84375C0.328125 0.65625 0.395833 0.494792 0.53125 0.359375C0.65625 0.234375 0.8125 0.171875 1 0.171875C1.1875 0.171875 1.34375 0.234375 1.46875 0.359375L5.46875 4.35938C5.60417 4.49479 5.67188 4.65625 5.67188 4.84375C5.67188 5.02083 5.60417 5.17188 5.46875 5.29688L1.46875 9.29688Z"
+                      fill="#111111" />
+                  </svg></span>
+              </a>
+            </li>
+            <li class="navbar_item_mobile">
+              <a class="navbar_item_mobile_link d-flex justify-content-between" href="">Blog
+                <span class="nav_icon"><svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.46875 9.29688C1.34375 9.43229 1.1875 9.5 1 9.5C0.8125 9.5 0.65625 9.43229 0.53125 9.29688C0.395833 9.17188 0.328125 9.02083 0.328125 8.84375C0.328125 8.65625 0.395833 8.49479 0.53125 8.35938L4.0625 4.82812L0.53125 1.29688C0.395833 1.17188 0.328125 1.02083 0.328125 0.84375C0.328125 0.65625 0.395833 0.494792 0.53125 0.359375C0.65625 0.234375 0.8125 0.171875 1 0.171875C1.1875 0.171875 1.34375 0.234375 1.46875 0.359375L5.46875 4.35938C5.60417 4.49479 5.67188 4.65625 5.67188 4.84375C5.67188 5.02083 5.60417 5.17188 5.46875 5.29688L1.46875 9.29688Z"
+                      fill="#111111" />
+                  </svg></span>
+              </a>
+            </li>
+            <li class="navbar_item_mobile">
+              <a class="navbar_item_mobile_link d-flex justify-content-between" href="">Page
+                <span class="nav_icon"><svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.46875 9.29688C1.34375 9.43229 1.1875 9.5 1 9.5C0.8125 9.5 0.65625 9.43229 0.53125 9.29688C0.395833 9.17188 0.328125 9.02083 0.328125 8.84375C0.328125 8.65625 0.395833 8.49479 0.53125 8.35938L4.0625 4.82812L0.53125 1.29688C0.395833 1.17188 0.328125 1.02083 0.328125 0.84375C0.328125 0.65625 0.395833 0.494792 0.53125 0.359375C0.65625 0.234375 0.8125 0.171875 1 0.171875C1.1875 0.171875 1.34375 0.234375 1.46875 0.359375L5.46875 4.35938C5.60417 4.49479 5.67188 4.65625 5.67188 4.84375C5.67188 5.02083 5.60417 5.17188 5.46875 5.29688L1.46875 9.29688Z"
+                      fill="#111111" />
+                  </svg></span>
+              </a>
+            </li>
+            <li class="navbar_item_mobile">
+              <a class="navbar_item_mobile_link " href="">Buy Umino! </a>
+            </li>
+            <li class="navbar_item_mobile">
+              <a class="navbar_item_mobile_link d-flex justify-content-between" href="">Digital 01
+                <span class="nav_icon"><svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.46875 9.29688C1.34375 9.43229 1.1875 9.5 1 9.5C0.8125 9.5 0.65625 9.43229 0.53125 9.29688C0.395833 9.17188 0.328125 9.02083 0.328125 8.84375C0.328125 8.65625 0.395833 8.49479 0.53125 8.35938L4.0625 4.82812L0.53125 1.29688C0.395833 1.17188 0.328125 1.02083 0.328125 0.84375C0.328125 0.65625 0.395833 0.494792 0.53125 0.359375C0.65625 0.234375 0.8125 0.171875 1 0.171875C1.1875 0.171875 1.34375 0.234375 1.46875 0.359375L5.46875 4.35938C5.60417 4.49479 5.67188 4.65625 5.67188 4.84375C5.67188 5.02083 5.60417 5.17188 5.46875 5.29688L1.46875 9.29688Z"
+                      fill="#111111" />
+                  </svg></span>
+              </a>
+            </li>
+            <li class="navbar_item_mobile">
+              <a class="navbar_item_mobile_link d-flex justify-content-between" href="">USD
+                <span class="nav_icon"><svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.46875 9.29688C1.34375 9.43229 1.1875 9.5 1 9.5C0.8125 9.5 0.65625 9.43229 0.53125 9.29688C0.395833 9.17188 0.328125 9.02083 0.328125 8.84375C0.328125 8.65625 0.395833 8.49479 0.53125 8.35938L4.0625 4.82812L0.53125 1.29688C0.395833 1.17188 0.328125 1.02083 0.328125 0.84375C0.328125 0.65625 0.395833 0.494792 0.53125 0.359375C0.65625 0.234375 0.8125 0.171875 1 0.171875C1.1875 0.171875 1.34375 0.234375 1.46875 0.359375L5.46875 4.35938C5.60417 4.49479 5.67188 4.65625 5.67188 4.84375C5.67188 5.02083 5.60417 5.17188 5.46875 5.29688L1.46875 9.29688Z"
+                      fill="#111111" />
+                  </svg></span>
+              </a>
+            </li>
+            <li class="navbar_item_mobile">
+              <a class="navbar_item_mobile_link d-flex align-items-center" href="">
+                <span class="nav_icon"> <svg width="19" height="19" viewBox="0 0 23 23" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="icon">
+                      <path id="Vector"
+                        d="M22.8548 21.3335C21.6915 19.3657 20.0317 17.7342 18.0398 16.6007C16.0478 15.4671 13.7928 14.8708 11.4979 14.8708C9.20304 14.8708 6.94798 15.4671 4.95601 16.6007C2.96405 17.7342 1.30427 19.3657 0.141025 21.3335C-0.00138538 21.5887 -0.0376415 21.8893 0.0400248 22.1708C0.0766559 22.3141 0.143667 22.4481 0.236568 22.5636C0.329469 22.6791 0.446115 22.7735 0.578691 22.8406C0.74972 22.937 0.943214 22.987 1.1398 22.9857C1.33475 22.9939 1.52817 22.9482 1.69855 22.8536C1.86893 22.759 2.0096 22.6192 2.10491 22.4498C3.06783 20.8199 4.44211 19.4686 6.09163 18.5296C7.74115 17.5907 9.60864 17.0968 11.5091 17.0968C13.4096 17.0968 15.2771 17.5907 16.9266 18.5296C18.5761 19.4686 19.9504 20.8199 20.9133 22.4498C21.0632 22.7033 21.3076 22.8877 21.5934 22.9629C21.8792 23.0382 22.1832 22.9982 22.4396 22.8517C22.5672 22.784 22.6791 22.6904 22.768 22.577C22.8569 22.4635 22.9209 22.3327 22.9558 22.1931C22.9973 22.0503 23.0098 21.9008 22.9924 21.7532C22.9751 21.6056 22.9283 21.4629 22.8548 21.3335Z"
+                        fill="#111111" />
+                      <path id="Vector_2"
+                        d="M11.4996 13.8C13.3079 13.8003 15.044 13.0842 16.3345 11.8057C17.6249 10.5272 18.3665 8.78854 18.3996 6.96384C18.3996 5.11691 17.6726 3.34563 16.3786 2.03966C15.0846 0.733688 13.3296 0 11.4996 0C9.66962 0 7.91457 0.733688 6.62057 2.03966C5.32657 3.34563 4.59961 5.11691 4.59961 6.96384C4.63276 8.78854 5.37433 10.5272 6.66476 11.8057C7.95518 13.0842 9.69132 13.8003 11.4996 13.8ZM6.89961 6.96384C6.89961 5.73255 7.38425 4.5517 8.24692 3.68105C9.10959 2.8104 10.2796 2.32128 11.4996 2.32128C12.7196 2.32128 13.8896 2.8104 14.7523 3.68105C15.615 4.5517 16.0996 5.73255 16.0996 6.96384C16.0996 8.19512 15.615 9.37597 14.7523 10.2466C13.8896 11.1173 12.7196 11.6064 11.4996 11.6064C10.2796 11.6064 9.10959 11.1173 8.24692 10.2466C7.38425 9.37597 6.89961 8.19512 6.89961 6.96384Z"
+                        fill="#111111" />
+                    </g>
+                  </svg></span>
+                <span>My Account </span>
+
+
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar_btn_mobile">
+            <li>
+              <a class="navbar_btn black">Sign In</a>
+            </li>
+            <li>
+              <a class="navbar_btn white">Create An Account</a>
+            </li>
+
+
+          </ul>
         </div>
         <div class="row">
           <div class="header_mid_logo col-xl-2 d-xl-block d-none">
@@ -336,16 +459,16 @@
                         </ul>
                       </li>
                       <li class="shop-item shop-item_img col-md-2 ">
-                         <a href="" class="lap position-relative" >
-                          <button class="btn_shop position-absolute">Macbook/PCs</button>                     
-                         </a>
-                         
-                          
+                        <a href="" class="lap position-relative">
+                          <button class="btn_shop position-absolute">Macbook/PCs</button>
+                        </a>
+
+
                       </li>
                       <li class="shop-item shop-item_img col-md-2">
-                        <div class="smart_tv position-relative" >
-                          <button class="btn_shop position-absolute">OLED/Smart TV</button>                     
-                         </div>
+                        <div class="smart_tv position-relative">
+                          <button class="btn_shop position-absolute">OLED/Smart TV</button>
+                        </div>
                       </li>
                     </ul>
 
@@ -508,7 +631,7 @@
                           <li class="shop_main_item">
                             <a class="shop_main_link" href="#">Size Guide HTML</a>
                           </li>
-                       
+
                         </ul>
                       </li>
                     </ul>
@@ -841,9 +964,266 @@
   </main>
 
 
+  <footer class="footer">
+    <div class="container">
+      <div class="footer_head">
+        <h1>Sign Up to Newsletter</h1>
+        <p>Enter your email address to get $10 off your first order and free shipping.</p>
+        <div class="footer_input d-lg-flex justify-content-center">
+          <input type="text" placeholder="Enter your email..." />
+          <button class="footer_btn">Subcribe</button>
+        </div>
+      </div>
 
 
+      <div class="footer_body">
+        <div class="row">
+          <div class="col-lg-4 col-12 mb-lg-0 mb-4">
+            <div class="footer_contact">
+              <h2>Contact Us</h2>
+              <p class="question">Got Question? Call us 24/7</p>
+              <p class="phone_contact">+555-1900-2628</p>
+              <p class="address">268 St, South New York/NY 98944, United States<br/>blueskytechcompany@gmail.com</p>
+              <div class="social d-flex">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                >
+                  <circle cx="18" cy="18" r="17.5" stroke="#555555" />
+                  <path
+                    d="M21.6 12H14.4C13.0745 12 12 13.0746 12 14.4V21.6001C12 22.9255 13.0745 24 14.4 24H21.6C22.9255 24 24 22.9255 24 21.6001V14.4001C24.0001 13.0746 22.9255 12 21.6 12ZM20.4 13.8001H22.2V15.6001H20.4V13.8001ZM18 15.6001C19.3255 15.6001 20.4 16.6746 20.4 18.0001C20.4 19.3256 19.3255 20.4001 18 20.4001C16.6745 20.4001 15.6 19.3256 15.6 18.0001C15.6 16.6746 16.6745 15.6001 18 15.6001ZM22.8 21.6001C22.8 22.2628 22.2627 22.8001 21.6 22.8001H14.4C13.7373 22.8001 13.2 22.2628 13.2 21.6001V17.4001H14.46C14.0996 19.3554 15.3926 21.2326 17.3479 21.5929C19.3032 21.9533 21.1804 20.6603 21.5408 18.705C21.5836 18.4726 21.6035 18.2365 21.6 18.0001C21.597 17.7987 21.577 17.5981 21.54 17.4001H22.8V21.6001H22.8Z"
+                    fill="#555555"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                >
+                  <circle cx="18" cy="18" r="17.5" stroke="#555555" />
+                  <path
+                    d="M16.9886 24C15.9308 24 14.9163 23.5966 14.1682 22.8785C13.4202 22.1604 13 21.1865 13 20.1709C13 19.1554 13.4202 18.1814 14.1682 17.4634C14.9163 16.7453 15.9308 16.3418 16.9886 16.3418H17.9625V18.2106H16.9886C16.5841 18.2106 16.1886 18.3257 15.8522 18.5415C15.5159 18.7573 15.2537 19.0639 15.0989 19.4228C14.9441 19.7816 14.9036 20.1764 14.9825 20.5573C15.0614 20.9382 15.2562 21.2881 15.5423 21.5627C15.8283 21.8373 16.1928 22.0243 16.5896 22.1001C16.9864 22.1759 17.3976 22.137 17.7714 21.9884C18.1452 21.8397 18.4646 21.5881 18.6894 21.2651C18.9141 20.9422 19.0341 20.5626 19.0341 20.1742V12H20.9807V12.9338C20.9807 13.4546 21.1962 13.9541 21.5798 14.3223C21.9634 14.6906 22.4836 14.8975 23.0261 14.8975H24V16.7629H23.0193C22.2984 16.7639 21.591 16.5753 20.9739 16.2175V20.1709C20.973 21.1856 20.5529 22.1586 19.8058 22.8764C19.0587 23.5942 18.0456 23.9983 16.9886 24Z"
+                    fill="#555555"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                >
+                  <circle cx="18" cy="18" r="17.5" stroke="#555555" />
+                  <path
+                    d="M24.9882 14.5648C24.8236 13.9529 24.3412 13.4706 23.7294 13.3058C22.6117 13 18.1411 13 18.1411 13C18.1411 13 13.6706 13 12.5529 13.2942C11.9529 13.4588 11.4587 13.953 11.2941 14.5648C11 15.6823 11 18 11 18C11 18 11 20.3294 11.2941 21.4352C11.4589 22.047 11.9411 22.5294 12.553 22.6941C13.6823 23 18.1412 23 18.1412 23C18.1412 23 22.6117 23 23.7294 22.7058C24.3413 22.5411 24.8236 22.0588 24.9884 21.447C25.2824 20.3294 25.2824 18.0118 25.2824 18.0118C25.2824 18.0118 25.2942 15.6823 24.9882 14.5648ZM16.7177 20.1412V15.8588L20.4353 18L16.7177 20.1412Z"
+                    fill="#555555"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                >
+                  <circle cx="18" cy="18" r="17.5" stroke="#555555" />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.9184 12H12.066L16.5298 18.6281L12 24H13.5877L17.2347 19.6747L20.1476 24H24L19.3764 17.1347L23.7059 12H22.1183L18.6714 16.0879L15.9184 12ZM17.4993 17.9239L14.2821 13.2286H15.2134L17.9508 17.2237L18.3878 17.8614L21.7755 22.8054H20.8442L17.9793 18.6242L17.4993 17.9239Z"
+                    fill="#555555"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                >
+                  <circle cx="18" cy="18" r="17.5" stroke="#555555" />
+                  <path
+                    d="M16.3334 14.6667V16.0001H15V18.0001H16.3334V24H19V18.0001H20.7734L21 16.0001H19V14.8334C19 14.2934 19.0533 14.0067 19.8866 14.0067H21V12H19.2134C17.08 12.0001 16.3334 13.0001 16.3334 14.6667Z"
+                    fill="#555555"
+                  />
+                </svg>
+              </div>
+            </div>
+          
 
+          </div>
+          <div class="col-lg-8 col-12">
+            <div class="row gx-3">
+              <div class="col-lg-3 col-12">
+                <div class="footer_help">
+                  <div class="d-lg-block d-flex justify-content-between mb-lg-0 mb-3">
+                    <h2>Company</h2>
+                    <svg
+                    class="footer_icon d-lg-none"
+                    width="13"
+                    height="13"
+                    viewBox="0 0 10 5"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.08984 1.32227C0.971354 1.21289 0.912109 1.08073 0.912109 0.925781C0.912109 0.761719 0.971354 0.620443 1.08984 0.501953C1.19922 0.392578 1.33594 0.337891 1.5 0.337891C1.66406 0.337891 1.80078 0.392578 1.91016 0.501953L5 3.5918L8.08984 0.501953C8.19922 0.392578 8.33594 0.337891 8.5 0.337891C8.66406 0.337891 8.80078 0.392578 8.91016 0.501953C9.02865 0.620443 9.08789 0.761719 9.08789 0.925781C9.08789 1.08073 9.02865 1.21289 8.91016 1.32227L5.41016 4.82227C5.30078 4.94076 5.16406 5 5 5C4.83594 5 4.69922 4.94076 4.58984 4.82227L1.08984 1.32227Z"
+                      fill="#555555"
+                    />
+                  </svg>
+                  </div>
+                 
+                  <ul class="footer_list list-unstyled">
+                    <li class="footer_item">
+                      <a href="" class="footer_link">About Us</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Our Stores</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Contact Us</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Size Guide</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">My Account</a>
+                    </li>
+                  </ul>
+                </div>
+              
+  
+              </div>
+              <div class="col-lg-3 col-12">
+                <div class="footer_help">
+                  <div class="d-lg-block d-flex justify-content-between mb-lg-0 mb-3">
+                    <h2>Customer Service</h2>
+                    <svg
+                    class="footer_icon d-lg-none"
+                    width="13"
+                    height="13"
+                    viewBox="0 0 10 5"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.08984 1.32227C0.971354 1.21289 0.912109 1.08073 0.912109 0.925781C0.912109 0.761719 0.971354 0.620443 1.08984 0.501953C1.19922 0.392578 1.33594 0.337891 1.5 0.337891C1.66406 0.337891 1.80078 0.392578 1.91016 0.501953L5 3.5918L8.08984 0.501953C8.19922 0.392578 8.33594 0.337891 8.5 0.337891C8.66406 0.337891 8.80078 0.392578 8.91016 0.501953C9.02865 0.620443 9.08789 0.761719 9.08789 0.925781C9.08789 1.08073 9.02865 1.21289 8.91016 1.32227L5.41016 4.82227C5.30078 4.94076 5.16406 5 5 5C4.83594 5 4.69922 4.94076 4.58984 4.82227L1.08984 1.32227Z"
+                      fill="#555555"
+                    />
+                  </svg>
+                  </div>
+                  <ul class="footer_list list-unstyled">
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Privacy Policy</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Refund Policy</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Shipping & Return</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Term & Conditions</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Advanced Search</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Store Locations</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-12">
+                <div class="footer_help">
+                  <div class="d-lg-block d-flex justify-content-between mb-lg-0 mb-3">
+                    <h2>Shop By Categories</h2>
+                    <svg
+                    class="footer_icon d-lg-none" 
+                    width="13"
+                    height="13"
+                    viewBox="0 0 10 5"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.08984 1.32227C0.971354 1.21289 0.912109 1.08073 0.912109 0.925781C0.912109 0.761719 0.971354 0.620443 1.08984 0.501953C1.19922 0.392578 1.33594 0.337891 1.5 0.337891C1.66406 0.337891 1.80078 0.392578 1.91016 0.501953L5 3.5918L8.08984 0.501953C8.19922 0.392578 8.33594 0.337891 8.5 0.337891C8.66406 0.337891 8.80078 0.392578 8.91016 0.501953C9.02865 0.620443 9.08789 0.761719 9.08789 0.925781C9.08789 1.08073 9.02865 1.21289 8.91016 1.32227L5.41016 4.82227C5.30078 4.94076 5.16406 5 5 5C4.83594 5 4.69922 4.94076 4.58984 4.82227L1.08984 1.32227Z"
+                      fill="#555555"
+                    />
+                  </svg>
+                  </div>
+                  <ul class="footer_list list-unstyled">
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Smartphone</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Headphones</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Computer & Desktop</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Cameras & Photos</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Laptop & Ipad</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-12">
+                <div class="footer_help">
+                  <div class="d-lg-block d-flex justify-content-between mb-lg-0 mb-3">
+                    <h2>Usefull Links</h2>
+                    <svg
+                    class="footer_icon d-lg-none"
+                    width="13"
+                    height="13"
+                    viewBox="0 0 10 5"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.08984 1.32227C0.971354 1.21289 0.912109 1.08073 0.912109 0.925781C0.912109 0.761719 0.971354 0.620443 1.08984 0.501953C1.19922 0.392578 1.33594 0.337891 1.5 0.337891C1.66406 0.337891 1.80078 0.392578 1.91016 0.501953L5 3.5918L8.08984 0.501953C8.19922 0.392578 8.33594 0.337891 8.5 0.337891C8.66406 0.337891 8.80078 0.392578 8.91016 0.501953C9.02865 0.620443 9.08789 0.761719 9.08789 0.925781C9.08789 1.08073 9.02865 1.21289 8.91016 1.32227L5.41016 4.82227C5.30078 4.94076 5.16406 5 5 5C4.83594 5 4.69922 4.94076 4.58984 4.82227L1.08984 1.32227Z"
+                      fill="#555555"
+                    />
+                  </svg>
+                  </div>
+                  <ul class="footer_list list-unstyled">
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Blog</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">My Account</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Wishlist</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Terms of Service</a>
+                    </li>
+                    <li class="footer_item">
+                      <a href="" class="footer_link">Purchase Theme</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="./main.js"></script>
 </body>
 
 </html>
