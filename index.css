@@ -11,6 +11,7 @@
   top: 0;
   z-index: 2;
   background-color: var(--primay-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .header_top {
@@ -616,8 +617,23 @@
 .top_deal_product_item_img:hover img:nth-child(2) {
   opacity: 1;
 }
-
-.top_deal_product_item_text p {
+/* top_sell hover */
+.top_sell_product_img img:nth-child(2){
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.top_sell_product_img img{
+  transition: opacity linear 0.3s;
+}
+.top_sell_product_img:hover img:nth-child(1){
+  opacity: 0;
+}
+.top_sell_product_img:hover img:nth-child(2){
+  opacity: 1;
+}
+.top_deal_product_item_text p{
   margin-bottom: 0px;
 }
 
@@ -651,6 +667,9 @@
   font-family: var(--primary-font);
   font-weight: 500;
   word-wrap: break-word
+}
+.top_deal_product_item_text .star{
+  margin-bottom: 10px;
 }
 
 .discount {
@@ -890,7 +909,12 @@
   padding-bottom: 15px;
   border-bottom: 1px solid #E5E8EC;
 }
-
+.top_sell_product_list .star{
+  line-height: 1;
+}
+a{
+  text-decoration: none !important;
+}
 .top_sell_text p {
   display: inline-block;
   color: var(--secondry-color);

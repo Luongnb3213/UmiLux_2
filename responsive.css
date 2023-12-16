@@ -1,6 +1,10 @@
 /* mobile */
 
-
+@media (min-width: 1400px) {
+    .container{
+        max-width: 1410px !important;
+    }
+}
 
 @media only screen and (min-width: 993px) and (max-width: 1199px){
     .footer_input button{
@@ -66,6 +70,61 @@
 
 
 @media (max-width:739px) {
+    #top_sell_carouse_mobile .carousel-indicators{
+        top: 100%;
+    }
+    .top_sell_product_list{
+        min-height: unset;
+        max-height: 200px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .recomend_product{
+        padding-top: 30px;
+    }
+    .recomend_product_head_text{
+        display: none;
+    }
+    .top_sell{
+        padding: 30px 0px 60px 0px;
+    }
+    .top_sell_product{
+        display: none;
+    }
+    #top_deal_carouse_mobile{
+        padding-bottom: 30px !important;
+    }
+    #top_deal_carouse_mobile .carousel-indicators{
+         top: 100%;
+    }
+    .top_deal_product_item{
+        width: 50%;
+    }
+    .top_deal{
+        padding-top: 60px;
+    }
+    .top_deal_product{
+        display: none;
+    }
+    #carouselExampleIndicators{
+       
+    }
+    .product_list{
+        padding: 30px 0px;
+    }
+    .carousel-indicators button{
+        background-color: var(--black-color) !important;
+        border-radius: 50%;
+        height: 8px !important;
+        width: 8px !important;
+    }
+    .carousel-indicators{
+        margin-bottom: 0px !important;
+        top: 103%;
+    }
+    .product_image_item{
+        width: 50%;
+    }
     .footer_input input,.footer_input button{
         height: 50px;
     }
