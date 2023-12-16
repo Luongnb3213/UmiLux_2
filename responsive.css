@@ -36,6 +36,9 @@
 
 /* tablet */
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
+    .payment-item::before{
+        display: none;
+    }
     .footer_input input{
         flex: 1;
     }
@@ -63,6 +66,24 @@
 
 
 @media (max-width:739px) {
+    .footer_input input,.footer_input button{
+        height: 50px;
+    }
+    .footer_input input{
+        flex: none;
+    }
+    .footer_input button{
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+    .footer_input{
+        height: unset;
+    }
+    .payment-text p:nth-child(1) {
+        margin-bottom: 5px;
+        color: var(--black-color);
+        font-size: 18px;
+      }
     .footer_list {
         display: none;
     }

@@ -580,6 +580,10 @@
   width: calc((100% - 10px) / 5);
 }
 
+.top_deal_product_item:nth-child(2) .top_deal_product_item_text .name {
+  color: var(--secondry-color);
+}
+
 .top_deal_product_item_text {
   font-family: var(--primary-font);
   font-weight: 500;
@@ -619,7 +623,6 @@
 }
 
 .top_deal_product_item_text .new-price {
-  margin-top: 15px;
   color: var(--secondry-color);
   font-size: 18px;
   font-family: var(--primary-font);
@@ -639,8 +642,28 @@
   left: 0;
   top: 0;
 }
+.discount.pre-order{
+   color: var(--black-color);
+   background-color: #F8BA26;
+   top: 13%;
+}
+
+.top_sell_product_img {
+  width: 40%;
+  padding: 0px 5px;
+}
+
+.top_sell_product_img .discount {
+  top: -4%;
+}
+
+.top_deal_product_item_text {
+  flex: 1;
+  padding: 0 5px;
+}
 
 .name:hover {
+  cursor: pointer;
   color: var(--secondry-color);
 }
 
@@ -798,7 +821,9 @@
   padding: 12px 11px;
 }
 
-.shop-item:hover .lap {}
+.shop-item:hover .lap {
+  background-size: unset;
+}
 
 .btn_shop:hover {
   color: white;
@@ -808,11 +833,11 @@
 .lap,
 .smart_tv {
   display: block;
-  transition: all linear 0.5s;
   height: 100%;
   border-radius: 12px;
   background: url(./image/lap&PC.jpg) no-repeat center;
   background-size: cover;
+  transition: all linear 0.5s;
 }
 
 .smart_tv {
@@ -836,34 +861,159 @@
   font-weight: 600;
   word-wrap: break-word
 }
-.top_sell_text{
-  padding-bottom:15px;
+
+.top_sell_text {
+  padding-bottom: 15px;
   border-bottom: 1px solid #E5E8EC;
 }
+
 .top_sell_text p {
+  display: inline-block;
   color: var(--secondry-color);
   font-size: var(--font-size-text);
   font-family: var(--primary-font);
   font-weight: 500;
-  word-wrap: break-word
+  word-wrap: break-word;
+   margin-bottom: 0px;
 }
-.top_sell_text p svg{
+
+.top_sell_text p svg {
   position: relative;
   top: -1px;
   margin-left: 5px;
 }
-.top_sell_product{
+
+.top_sell_product {
   margin-top: 30px;
 }
-.top_sell_product_list{
+
+.top_sell_product_list {
+  min-height: 200px;
   background-color: var(--white-color);
-}
-.top_sell_product_list{
   border-radius: 5px;
-   padding: 20px;
+  padding: 20px;
 }
-.top_sell_product .row>*{
+
+.top_sell_product .row>* {
   margin-top: 0px;
+}
+
+.recomend_product {
+  padding-top: 60px;
+}
+
+.recomend_product_head_text {
+  color: #999999;
+  font-size: var(--font-size-text);
+  font-family: var(--primary-font);
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.deal_promotion {
+  padding: 60px 0px;
+}
+
+.deal_promotion_head {
+  padding-left: 15px;
+  border-bottom: 1px solid #E5E8EC;
+}
+
+.deal_promotion_head h2 {
+  color: var(--black-color);
+  font-size: 28px;
+  font-family: var(--primary-font);
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.deal_promotion_product {
+  margin-top: 30px;
+}
+
+.deal_img {
+  display: block;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.deal_img img {
+  border-radius: 5px;
+  transition: all linear 0.3s;
+}
+
+.deal_img:hover img {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.deal_text p:nth-child(1) {
+  margin: 20px 0px 10px 0px;
+  color: var(--black-color);
+  font-size: 16px;
+  font-family: var(--primary-font);
+  font-weight: 600;
+  line-height: 20px;
+  word-wrap: break-word;
+}
+
+.deal_text p:nth-child(2) {
+  margin-bottom: 0px;
+  color: #555555;
+  font-size: 14px;
+  font-family: var(--primary-font);
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.payment {
+  border-bottom: 1px solid #E5E8EC;
+  border-top: 1px solid #E5E8EC;
+  padding: 40px 0px;
+}
+
+.payment-item {
+  position: relative;
+}
+
+.payment-item::before {
+  position: absolute;
+  content: "";
+  height: 60px;
+  width: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-right: 1px solid #E5E8EC;
+}
+
+.payment-product:nth-child(1) .payment-item::before {
+  display: none;
+
+}
+
+.payment_img {
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+.payment-text {
+  text-align: center;
+  font-family: var(--primary-font);
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.payment-text p:nth-child(1) {
+  margin-bottom: 5px;
+  color: var(--black-color);
+  font-size: 15px;
+}
+
+.payment-text p:nth-child(2) {
+  margin-bottom: 0px;
+  color: #555555;
+  font-size: 14px;
 }
 
 /* footer */
