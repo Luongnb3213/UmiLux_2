@@ -273,10 +273,14 @@
     visibility: visible;
   }
 }
-
+.navbar_item_mobile_link.active{
+  color: var(--secondry-color);
+}
+.navbar_item_mobile_link.active span svg path{
+  fill: var(--secondry-color);
+}
 .navbar_item_list_head {
   padding-left: 15px;
-
   background-color: var(--black-color);
   height: 50px;
 }
@@ -1063,7 +1067,9 @@ a{
   color: #555555;
   font-size: 14px;
 }
-
+.carousel-indicators{
+  z-index: 1!important;
+}
 /* footer */
 .footer {
   background-color: #F1F3F7;
