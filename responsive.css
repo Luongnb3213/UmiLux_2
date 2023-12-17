@@ -7,12 +7,50 @@
 }
 
 @media only screen and (min-width: 993px) and (max-width: 1199px) {
+    #carousel_tablet .carousel-indicators {
+        top: 100%;
+        margin: 0px;
+    }
+
+    #carousel_tablet {
+        margin-bottom: 60px;
+    }
+
+    #top_deal_carousel_tablet,
+    #rec_carousel_tablet {
+        margin-top: 30px;
+    }
+
+    #top_deal_carousel_tablet .carousel-indicators button,
+    #rec_carousel_tablet .carousel-indicators button,
+    #top_sell_carouse_tablet .carousel-indicators button,
+    #carousel_tablet .carousel-indicators button {
+        background-color: black !important;
+        border-radius: 50%;
+        height: 8px !important;
+        width: 8px !important;
+    }
+
+    #top_deal_carousel_tablet .carousel-indicators,
+    #rec_carousel_tablet .carousel-indicators,
+    #top_sell_carouse_tablet .carousel-indicators {
+        top: 103%;
+        margin: 0px;
+    }
+
+    .top_deal_product {
+        display: none;
+    }
+
     .footer_input button {
         padding: 10px 30px;
     }
 }
 
 @media (max-width: 1199px) {
+    .top_deal_product {
+        display: none;
+    }
 
     /* item_moblie */
     .item_mobile_list {
@@ -42,10 +80,11 @@
         position: relative;
         top: -2px;
     }
-    .item_mobile_list .navbar_item_list_mobile .navbar_item_mobile_link{
+
+    .item_mobile_list .navbar_item_list_mobile .navbar_item_mobile_link {
         color: #555;
     }
-   
+
     /* item_moblie */
     .rotate {
         transform: rotate(180deg);
@@ -76,9 +115,32 @@
 
 /* tablet */
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
-    .item_mobile_list{
+
+    #top_deal_carousel_tablet,
+    #rec_carousel_tablet {
+        margin-top: 30px;
+    }
+
+    #top_deal_carousel_tablet .carousel-indicators button,
+    #rec_carousel_tablet .carousel-indicators button,
+    #top_sell_carouse_tablet .carousel-indicators button {
+        background-color: black !important;
+        border-radius: 50%;
+        height: 8px !important;
+        width: 8px !important;
+    }
+
+    #top_deal_carousel_tablet .carousel-indicators,
+    #rec_carousel_tablet .carousel-indicators,
+    #top_sell_carouse_tablet .carousel-indicators {
+        top: 103%;
+        margin: 0px;
+    }
+
+    .item_mobile_list {
         width: 50%;
     }
+
     #carousel_tablet .carousel-indicators {
         top: 100%;
         margin: 0px;
@@ -179,8 +241,6 @@
     .top_deal_product {
         display: none;
     }
-
-    #carouselExampleIndicators {}
 
     .product_list {
         padding: 30px 0px;
