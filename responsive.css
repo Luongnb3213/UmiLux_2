@@ -40,6 +40,19 @@
 
 /* tablet */
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
+    #carousel_tablet .carousel-indicators {
+        top: 100%;
+        margin: 0px;
+    }
+    #carousel_tablet .carousel-indicators button{
+        background-color: black !important;
+        border-radius: 50%;
+        height: 8px !important;
+        width: 8px !important;
+    }
+    #carousel_tablet{
+        margin-bottom: 60px;
+    }
     .payment-item::before{
         display: none;
     }
