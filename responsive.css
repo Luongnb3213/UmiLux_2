@@ -191,6 +191,43 @@
 
 
 @media (max-width:739px) {
+   
+    .mobile-footer_item_text{
+        font-size: 13px;
+        color: var(--black-color);
+        font-weight: 500;
+    }
+    .mobile-footer_item{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6px 10px;
+    }
+    .mobile-footer_item .number-item{
+        top: 0;
+    }
+    .mobile-footer-list{
+        margin-bottom: 0px;
+        border-radius: 60px;
+        box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+        background-color: white;
+    }
+    .mobile-footer{
+       
+        position: fixed;
+        right: 12px;
+        left: 12px;
+        bottom: 2rem;
+        z-index: 2;
+    }
+    #recomend_carouse_mobile{
+        padding-top: 30px;
+    }
+    .product-purchase{
+        opacity: 0;
+        visibility: hidden;
+    }
     .back-top{
         width: 2.5rem;
         height: 2.5rem;
@@ -228,6 +265,7 @@
     }
 
     #top_deal_carouse_mobile {
+        padding-top: 30px !important;
         padding-bottom: 30px !important;
     }
 
