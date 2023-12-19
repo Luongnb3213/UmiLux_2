@@ -5,7 +5,47 @@
   padding: 0px;
   box-sizing: border-box;
 }
-
+.back-top{
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 2rem;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  bottom: 7rem;
+  text-align: center;
+  z-index: 1;
+  transform: scale(0);
+  overflow: hidden;
+  transition: all linear 0.3s;
+}
+.back-top_show{
+ 
+  transform: scale(1);
+}
+.back-top_icon{
+  position: absolute;
+  left: 47%;
+  top: 36%;
+  transform: rotate(270deg) translateY(-50%);
+}
+.back-top_icon path{
+  fill: var(--black-color);
+}
+.icon_change path{
+  fill: var(--white-color)
+}
+.bls_back-top{
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  transition: all linear 0.1s;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  height: 0%;
+}
 .header {
   position: sticky;
   top: 0;
@@ -41,7 +81,7 @@
   color: var(--white-color);
 }
 
-.header_top span:hover a {
+.header_top a:hover span{
   color: var(--secondry-color);
 }
 
@@ -237,7 +277,23 @@
   right: 0;
   bottom: 0;
 }
-
+.header_mid::before{
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: all linear 0.2s forwards;
+}
+.layer_in::before{
+  opacity: 1;
+  visibility: visible;
+}
 .slidein {
   animation: slidein linear 0.3s forwards;
 }
@@ -604,7 +660,7 @@
 }
 
 .top_deal_product_item_img img {
-  transition: opacity linear 0.3s;
+  transition: opacity linear 0.5s;
 }
 
 .top_deal_product_item_img img:nth-child(2) {
@@ -629,7 +685,7 @@
   opacity: 0;
 }
 .top_sell_product_img img{
-  transition: opacity linear 0.3s;
+  transition: opacity linear 0.5s;
 }
 .top_sell_product_img:hover img:nth-child(1){
   opacity: 0;
@@ -908,7 +964,12 @@
   font-weight: 600;
   word-wrap: break-word
 }
-
+.top_sell_text a{
+  color: var(--secondry-color);
+}
+.top_sell_text a:hover{
+  color: var(--secondry-color);
+}
 .top_sell_text {
   padding-bottom: 15px;
   border-bottom: 1px solid #E5E8EC;
@@ -961,7 +1022,15 @@ a{
   font-weight: 500;
   word-wrap: break-word;
 }
-
+.recomend_product_head_text .text{
+  color: #999999;
+}
+.recomend_product_head_text:hover .text{
+  color: var(--secondry-color);
+}
+.recomend_product_head_text:hover svg path{
+  fill: var(--secondry-color);
+}
 .deal_promotion {
   padding: 60px 0px;
 }
@@ -999,7 +1068,7 @@ a{
   transform: scale(1.1);
 }
 
-.deal_text p:nth-child(1) {
+.deal_text p:nth-child(1){
   margin: 20px 0px 10px 0px;
   color: var(--black-color);
   font-size: 16px;
@@ -1008,7 +1077,9 @@ a{
   line-height: 20px;
   word-wrap: break-word;
 }
-
+.deal_text p:nth-child(1) a{
+  color: var(--black-color);
+}
 .deal_text p:nth-child(2) {
   margin-bottom: 0px;
   color: #555555;

@@ -1,8 +1,13 @@
+"use strict";
+
 const navbar = document.querySelector(".navbar_item_list");
 const navbar_mobile = document.querySelector(".navbar_mobile");
 const layer = document.querySelector(".layer");
 const close = document.querySelector(".close");
 const footer_icon = document.querySelectorAll(".footer_icon");
+const header_mid = document.querySelector(".header_mid");
+const header_mid_before = window.getComputedStyle(header_mid, "::before");
+// lay phan tu pesudo element
 
 if (navbar_mobile) {
   navbar_mobile.onclick = function () {
@@ -10,7 +15,7 @@ if (navbar_mobile) {
       navbar.classList.remove("slideout");
     }
     navbar.classList.add("slidein");
-    layer.classList.add("showup");
+    header_mid.classList.add("layer_in");
 
     // mobile
     item_slidein();
@@ -21,13 +26,14 @@ if (close) {
   close.onclick = function () {
     navbar.classList.remove("slidein");
     navbar.classList.add("slideout");
-    layer.classList.remove("showup");
+    header_mid.classList.remove("layer_in");
+
     let navbar_item_mobile_link_list = document.querySelectorAll(
-        ".navbar_item_mobile_link"
-      );
-      navbar_item_mobile_link_list.forEach((navbar_item) => {
-         navbar_item.classList.remove('active')
-      })
+      ".navbar_item_mobile_link"
+    );
+    navbar_item_mobile_link_list.forEach((navbar_item) => {
+      navbar_item.classList.remove("active");
+    });
   };
 }
 if (footer_icon) {
@@ -84,8 +90,8 @@ function item_slidein() {
         ".navbar_item_mobile_link"
       );
       navbar_item_mobile_link_list.forEach((navbar_item) => {
-         navbar_item.classList.remove('active')
-      })
+        navbar_item.classList.remove("active");
+      });
 
       this.classList.add("active");
 
@@ -149,3 +155,38 @@ function item_slidein() {
     };
   });
 }
+
+///////////////////////////////////////
+var check = true;
+
+window.addEventListener("scroll", () => {
+  const windowHeight = document.documentElement.clientHeight;
+  const maxScrollHeight = document.documentElement.scrollHeight - windowHeight;
+  const back_top = document.querySelector(".back-top");
+  const back_top_icon = document.querySelector(".back-top_icon path");
+
+  const scrollYValue = window.scrollY;
+  if (scrollYValue > 100) {
+    if (check) {
+      back_top.classList.add("back-top_show");
+      check = false;
+    }
+  } else {
+    if (!check) {
+      back_top.classList.remove("back-top_show");
+      check = true;
+    }
+  }
+
+  const percentage = ((scrollYValue / maxScrollHeight) * 100).toFixed(0);
+  if (percentage > 49) {
+    back_top_icon.style.fill = "white"
+    
+  } else {
+    back_top_icon.style.fill = "black"
+  }
+
+  const test = document.querySelector(".bls_back-top");
+
+  test.style.height = `${percentage}%`;
+});

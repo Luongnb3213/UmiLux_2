@@ -191,6 +191,11 @@
 
 
 @media (max-width:739px) {
+    .back-top{
+        width: 2.5rem;
+        height: 2.5rem;
+        right: 1rem;
+    }
     .item_mobile_list {
         width: 100%;
     }
