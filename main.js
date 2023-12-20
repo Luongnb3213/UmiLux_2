@@ -15,7 +15,7 @@ if (navbar_mobile) {
     if (navbar.classList.contains("slideout")) {
       navbar.classList.remove("slideout");
     }
-    mobile_footer.classList.add("d-none")
+    mobile_footer.classList.add("d-none");
     navbar.classList.add("slidein");
     header_mid.classList.add("layer_in");
 
@@ -29,7 +29,7 @@ if (close) {
     navbar.classList.remove("slidein");
     navbar.classList.add("slideout");
     header_mid.classList.remove("layer_in");
-    mobile_footer.classList.remove("d-none")
+    mobile_footer.classList.remove("d-none");
     let navbar_item_mobile_link_list = document.querySelectorAll(
       ".navbar_item_mobile_link"
     );
@@ -43,7 +43,17 @@ if (footer_icon) {
     i.onclick = function () {
       let parentElement = i.parentElement.parentElement;
       let footer_list = parentElement.querySelector(".footer_list");
-      footer_list.classList.toggle("godown");
+      // window.getComputedStyle để lấy giá trị của thuộc tính từ kiểu đã tính
+      //  (computed style) thay vì từ thuộc tính trực tiếp được thiết lập trong 
+      //  style attribute.
+      // Ví dụ: ở trên nếu sử dụng  footer_list.style.maxHeight thì sẽ ra là = "" nên cần sử dụng  window.getComputedStyle để nó lấy luôn giá trị đã tính
+      let computedStyle = window.getComputedStyle(footer_list);
+
+      footer_list.style.maxHeight =
+        computedStyle.maxHeight === "0px"
+          ? footer_list.scrollHeight + "px"
+          : "0";
+
       this.classList.toggle("rotate");
     };
   });
@@ -171,12 +181,12 @@ window.addEventListener("scroll", () => {
   if (scrollYValue > 100) {
     if (check) {
       back_top.classList.add("back-top_show");
-      back_top.onclick = function(){
+      back_top.onclick = function () {
         window.scrollTo({
           top: 0,
-          behavior: 'smooth' 
-      });
-      }
+          behavior: "smooth",
+        });
+      };
       check = false;
     }
   } else {
@@ -185,7 +195,7 @@ window.addEventListener("scroll", () => {
       check = true;
     }
   }
-  
+
   const percentage = ((scrollYValue / maxScrollHeight) * 100).toFixed(0);
   if (percentage > 49) {
     back_top_icon.style.fill = "white";
@@ -219,17 +229,17 @@ const product = [
   {
     name: "Galaxy S21 Ultra 5G 128GB Unlocked International Version",
     img: "./image/top-selling/products_digital_32_1_Watch_2.jpg",
-  }
+  },
 ];
 
 var product_auto = setInterval(() => {
-   let randomProduct = product[getRandomInt(product.length)]
-   let time_random = getRandomInt(10)
+  let randomProduct = product[getRandomInt(product.length)];
+  let time_random = getRandomInt(10);
   if (auto_delete) {
     clearTimeout(auto_delete);
   }
-  if(document.querySelector(".product-purchase")){
-    document.querySelector(".product-purchase").remove()
+  if (document.querySelector(".product-purchase")) {
+    document.querySelector(".product-purchase").remove();
   }
   var product_purchase = document.createElement("div");
   var close_product = document.createElement("span");
@@ -277,3 +287,13 @@ var product_auto = setInterval(() => {
     clearTimeout(auto_delete);
   };
 }, 8000);
+
+function toggleSlideDown() {
+  var slidableContent = document.getElementById("slidableContent");
+
+  // Toggle the max-height property
+  slidableContent.style.maxHeight =
+    slidableContent.style.maxHeight === "0px"
+      ? slidableContent.scrollHeight + "px"
+      : "0";
+}
