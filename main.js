@@ -171,6 +171,12 @@ window.addEventListener("scroll", () => {
   if (scrollYValue > 100) {
     if (check) {
       back_top.classList.add("back-top_show");
+      back_top.onclick = function(){
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth' 
+      });
+      }
       check = false;
     }
   } else {
@@ -179,7 +185,7 @@ window.addEventListener("scroll", () => {
       check = true;
     }
   }
-
+  
   const percentage = ((scrollYValue / maxScrollHeight) * 100).toFixed(0);
   if (percentage > 49) {
     back_top_icon.style.fill = "white";
@@ -242,7 +248,7 @@ var product_auto = setInterval(() => {
         <h3 class="title">${randomProduct.name}</h3>
         <div class="product-purchase_time">
           <span class="time">
-            <span class="minutes">${time_random}</span> minutes ago
+            <span class="minutes">${time_random + 1}</span> minutes ago
           </span>
           <a href="">
             <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
