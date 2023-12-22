@@ -34,6 +34,7 @@
   height: 6rem;
 }
 .product-purchase_text .title {
+  color: var(--black-color);
   font-family: var(--primary-font);
   text-decoration: none;
   display: block;
@@ -1186,6 +1187,7 @@ a {
   fill: var(--secondry-color);
 }
 .rc-text svg {
+  margin-left: 5px;
   position: relative;
   top: -0.1rem;
 }

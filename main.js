@@ -252,7 +252,7 @@ var product_auto = setInterval(() => {
     <div class="col-9">
       <div class="product-purchase_text">
         <span>Someone purchased a </span>
-        <h3 class="title">${randomProduct.name}</h3>
+        <h3><a href="" class="title">${randomProduct.name}</a></h3>
         <div class="product-purchase_time">
           <span class="time">
             <span class="minutes">${time_random + 1}</span> minutes ago
