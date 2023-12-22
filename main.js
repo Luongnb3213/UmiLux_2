@@ -8,6 +8,7 @@ const footer_icon = document.querySelectorAll(".footer_icon");
 const header_mid = document.querySelector(".header_mid");
 const header_mid_before = window.getComputedStyle(header_mid, "::before");
 const mobile_footer = document.querySelector(".mobile-footer");
+
 // lay phan tu pesudo element
 
 if (navbar_mobile) {
@@ -120,7 +121,7 @@ function item_slidein() {
       let close_item = document.createElement("span");
       close_item.innerHTML = ` <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#111111"
              stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-             style="transform: translateY(-50%); margin-top: 18px">
+             style="transform: translateY(-50%); margin-top: 22px">
              <line x1="18" y1="6" x2="6" y2="18"></line>
              <line x1="6" y1="6" x2="18" y2="18"></line>
            </svg>`;
@@ -284,3 +285,25 @@ var product_auto = setInterval(() => {
   };
 }, 8000);
 
+
+const layer_item  = document.querySelector(".layer_item");
+const header_bot_left =  document.querySelector('.header_bot_left')
+header_bot_left.onclick = ()=>{
+    let dp_item_list =  document.querySelector('.dp_item_list')
+    let computedStyle = window.getComputedStyle(dp_item_list);
+    
+    dp_item_list.classList.toggle('dp_item_list_shown')
+    layer_item.classList.toggle('layer_item_go_in')
+}
+if(layer_item){
+  layer_item.onclick = ()=>{
+    header_bot_left.click()
+  }
+}
+header_mid.onclick = (e)=>{
+   if(e.target.classList.contains("header_mid")){
+       if(close){
+        close.click()
+       }
+   }
+}

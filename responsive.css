@@ -38,19 +38,14 @@
     margin-top: 30px;
   }
 
-  #top_deal_carousel_tablet .carousel-indicators button,
-  #rec_carousel_tablet .carousel-indicators button,
-  #top_sell_carouse_tablet .carousel-indicators button,
-  #carousel_tablet .carousel-indicators button {
+ .carousel-indicators button {
     background-color: black !important;
     border-radius: 50%;
     height: 8px !important;
     width: 8px !important;
   }
 
-  #top_deal_carousel_tablet .carousel-indicators,
-  #rec_carousel_tablet .carousel-indicators,
-  #top_sell_carouse_tablet .carousel-indicators {
+ .carousel-indicators {
     top: 103%;
     margin: 0px;
   }
@@ -133,8 +128,14 @@
     padding: 25px 0px;
   }
 }
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+}
 
 @media screen and (min-width: 1023px) and (max-width: 1439px) {
+  .shop-item-list,.product-item-list{
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
   #carouselExampleIndicators,
   #top_deal_carouse_mobile,
   #top_sell_carouse_mobile,
@@ -143,27 +144,24 @@
   }
   .header_mid,
   .header-top-list,
-  .header_bot {
-    padding-left: 7.5px;
-    padding-right: 7.5px;
-  }
-  .deal_promotion,
+  .header_bot, .deal_promotion,
   .top_deal,
   .top_sell,
   .payment,
   .recomend_product {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
-  .product_list {
-    padding: 60px 15px;
+  .product_list{
+    padding: 60px 7.5px;
   }
-  .footer {
-    padding: 60px 15px;
+  .footer{
+    padding: 60px 7.5px 0px 7.5px;
   }
 }
 /* tablet */
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
+  
   .deal_promotion,
   .header,
   .top_deal,
@@ -214,18 +212,14 @@
     margin-top: 30px;
   }
 
-  #top_deal_carousel_tablet .carousel-indicators button,
-  #rec_carousel_tablet .carousel-indicators button,
-  #top_sell_carouse_tablet .carousel-indicators button {
+  .carousel-indicators button {
     background-color: black !important;
     border-radius: 50%;
     height: 8px !important;
     width: 8px !important;
   }
 
-  #top_deal_carousel_tablet .carousel-indicators,
-  #rec_carousel_tablet .carousel-indicators,
-  #top_sell_carouse_tablet .carousel-indicators {
+ .carousel-indicators {
     top: 103%;
     margin: 0px;
   }
