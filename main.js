@@ -333,3 +333,21 @@ function countDown() {
   }, 1000);
 }
 countDown()
+
+const header =  document.querySelector('header')
+window.addEventListener('scroll', function(){
+  let header_top_list = document.querySelector('.header-top-list')
+  let computedStyle = window.getComputedStyle(header_top_list);
+  if(computedStyle.display === 'block'){
+    if(header.classList.contains('sticky_mobile')){
+      header.classList.remove('sticky_mobile')
+    }
+    header.classList.toggle('sticky',this.window.scrollY > 0)
+  }else{
+    if(header.classList.contains('sticky')){
+      header.classList.remove('sticky')
+    }
+    header.classList.toggle('sticky_mobile',this.window.scrollY > 0)
+  }
+ 
+})

@@ -148,7 +148,28 @@ html {
   background-color: var(--primay-color);
   box-shadow: 0 0.01rem 0.1rem rgba(0, 0, 0, 0.5);
 }
-
+.header.sticky{
+   animation: header_go_up 0.3s cubic-bezier(0, 0, 0.3, 1) forwards;
+}
+.header.sticky_mobile{
+  animation: header_go_up_2 0.3s cubic-bezier(0, 0, 0.3, 1) forwards;
+}
+@keyframes header_go_up_2 {
+  from{
+    transform: translateY(-200px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+@keyframes header_go_up {
+  from{
+    transform: translateY(-200px);
+  }
+  to{
+    transform: translateY(-33px);
+  }
+}
 .header_top {
   line-height: 1;
   padding: 1rem 0px;
@@ -1260,6 +1281,10 @@ a {
 .deal_text p:nth-child(1) a {
   color: var(--black-color);
   font-size: 1.6rem;
+  transition: all 0.2s linear;
+}
+.deal_text p:nth-child(1) a:hover{
+  color: var(--secondry-color);
 }
 .deal_text p:nth-child(2) {
   margin-bottom: 0px;

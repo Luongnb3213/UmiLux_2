@@ -132,7 +132,10 @@
     left: 2rem;
   }
   .header_mid_input .searchBar input{
-    padding: 1rem 0rem 1rem 5.4rem;
+    padding: 1rem 0rem 1.05rem 5.4rem;
+  }
+  .header_mid_input button{
+    padding: 0.95rem 2.5rem;
   }
   .shop-item-list,.product-item-list{
     padding-left: 7.5px;
