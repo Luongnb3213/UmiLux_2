@@ -45,7 +45,7 @@ if (footer_icon) {
       let parentElement = i.parentElement.parentElement;
       let footer_list = parentElement.querySelector(".footer_list");
       // window.getComputedStyle để lấy giá trị của thuộc tính từ kiểu đã tính
-      //  (computed style) thay vì từ thuộc tính trực tiếp được thiết lập trong 
+      //  (computed style) thay vì từ thuộc tính trực tiếp được thiết lập trong
       //  style attribute.
       // Ví dụ: ở trên nếu sử dụng  footer_list.style.maxHeight thì sẽ ra là = "" nên cần sử dụng  window.getComputedStyle để nó lấy luôn giá trị đã tính
       let computedStyle = window.getComputedStyle(footer_list);
@@ -54,7 +54,7 @@ if (footer_icon) {
         computedStyle.maxHeight === "0px"
           ? footer_list.scrollHeight + "px"
           : "0";
-
+      footer_list.classList.toggle("footer-list-padding");
       this.classList.toggle("rotate");
     };
   });
@@ -199,7 +199,6 @@ window.addEventListener("scroll", () => {
 
   const percentage = ((scrollYValue / maxScrollHeight) * 100).toFixed(0);
 
-
   const test = document.querySelector(".bls_back-top");
 
   test.style.height = `${percentage}%`;
@@ -285,25 +284,52 @@ var product_auto = setInterval(() => {
   };
 }, 8000);
 
+const layer_item = document.querySelector(".layer_item");
+const header_bot_left = document.querySelector(".header_bot_left");
+header_bot_left.onclick = () => {
+  let dp_item_list = document.querySelector(".dp_item_list");
+  let computedStyle = window.getComputedStyle(dp_item_list);
 
-const layer_item  = document.querySelector(".layer_item");
-const header_bot_left =  document.querySelector('.header_bot_left')
-header_bot_left.onclick = ()=>{
-    let dp_item_list =  document.querySelector('.dp_item_list')
-    let computedStyle = window.getComputedStyle(dp_item_list);
-    
-    dp_item_list.classList.toggle('dp_item_list_shown')
-    layer_item.classList.toggle('layer_item_go_in')
+  dp_item_list.classList.toggle("dp_item_list_shown");
+  layer_item.classList.toggle("layer_item_go_in");
+};
+if (layer_item) {
+  layer_item.onclick = () => {
+    header_bot_left.click();
+  };
 }
-if(layer_item){
-  layer_item.onclick = ()=>{
-    header_bot_left.click()
+header_mid.onclick = (e) => {
+  if (e.target.classList.contains("header_mid")) {
+    if (close) {
+      close.click();
+    }
   }
+};
+
+function countDown() {
+  var day = document.getElementById("day");
+  var hour = document.getElementById("hour");
+  var minute = document.getElementById("minute");
+  var second = document.getElementById("second");
+
+  var countDownDate = new Date("Oct 16, 2024 00:00:00").getTime();
+
+  var x = setInterval(() => {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    hours = String(hours).padStart(2, "0");
+    minutes = String(minutes).padStart(2, "0");
+    seconds = String(seconds).padStart(2, "0");
+     day.innerHTML = days
+     minute.innerHTML = minutes 
+     hour.innerHTML = hours
+     second.innerHTML = seconds
+  }, 1000);
 }
-header_mid.onclick = (e)=>{
-   if(e.target.classList.contains("header_mid")){
-       if(close){
-        close.click()
-       }
-   }
-}
+countDown()
