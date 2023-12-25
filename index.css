@@ -862,7 +862,8 @@ html {
 }
 
 .top_deal_product_item_text .category {
-  margin-bottom: 0px;
+  display: block;
+  margin-bottom: 5px;
   color: var(--text-color);
   font-size: 1.2rem;
   text-transform: uppercase;
