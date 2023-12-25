@@ -1098,18 +1098,19 @@ html {
 }
 
 .btn_shop {
-  font-size: var(--font-size-text);
+  font-size:1.4rem;
   transition: all linear 0.2s;
-  transform: translateY(-50%);
+  transform: translateX(-50%);
   font-weight: 600;
   border-radius: 3rem;
-  top: 80%;
-  left: 16%;
+  top: 75%;
+  left: 50%;
   color: var(--black-color);
   outline: none;
   border: none;
+  min-width: 156px;
   background-color: var(--white-color);
-  padding: 1.5rem 2.7rem;
+  padding: 1rem 2.7rem;
 }
 
 .btn_shop:hover {
