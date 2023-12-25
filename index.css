@@ -7,7 +7,10 @@
   --white-color: #fff;
   --black-color: #111111;
   --text-color: #999999;
+  --third-color:#837b7b;
   --font-size-text: 1.4rem;
+  --section-border-bottom:#e5e8ec;
+  --header-border-color:#364a9b;
   --third-color: #555555;
 }
 html {
@@ -18,12 +21,12 @@ html {
 }
 .product-purchase_time a {
   display: inline;
-  color: #837b7b;
+  color: var(--third-color);
   font-size: 1.3rem;
   margin-left: 0.2rem;
 }
 .product-purchase_time a:hover {
-  color: #837b7b;
+  color: var(--third-color);
 }
 .product-purchase_time a svg {
   position: relative;
@@ -38,7 +41,7 @@ html {
   font-family: var(--primary-font);
   text-decoration: none;
   display: block;
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   line-height: 1.5;
   width: 100%;
   text-align: left;
@@ -47,14 +50,14 @@ html {
 }
 .product-purchase_text span {
   font-size: 1.3rem;
-  color: #837b7b;
+  color: var(--third-color);
   cursor: pointer;
 }
 
 .product-purchase {
   box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.05);
   padding: 1.6rem;
-  background-color: white;
+  background-color: var(--white-color);
   border-radius: 0.5rem;
   position: fixed;
   bottom: 3rem;
@@ -152,7 +155,7 @@ html {
 }
 
 .header-top-list {
-  border-bottom: 1px solid #364a9b;
+  border-bottom: 1px solid var(--header-border-color);
 }
 
 .header_top span {
@@ -223,7 +226,7 @@ html {
   color: var(--white-color);
   border: none;
   outline: none;
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   font-family: var(--primary-font);
   font-weight: 500;
   word-wrap: break-word;
@@ -241,7 +244,7 @@ html {
   line-height: 1;
   margin-bottom: 0px;
   color: var(--white-color);
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   font-family: var(--primary-font);
   font-weight: 500;
   word-wrap: break-word;
@@ -275,7 +278,7 @@ html {
 
 .header_bot_left {
   color: var(--black-color);
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   font-family: var(--primary-font);
   font-weight: 600;
   word-wrap: break-word;
@@ -286,7 +289,7 @@ html {
 }
 
 .header_bot_left_text {
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   margin-left: 1rem;
 }
 
@@ -308,7 +311,7 @@ html {
   transition: all linear 0.2s;
   text-decoration: none;
   color: var(--black-color);
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   font-family: var(--primary-font);
   font-weight: 600;
   word-wrap: break-word;
@@ -329,7 +332,7 @@ html {
 .header_bot_right_text {
   transition: all 0.2s linear;
   color: var(--black-color);
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   font-family: var(--primary-font);
   font-weight: 500;
   word-wrap: break-word;
@@ -473,7 +476,7 @@ html {
   padding: 1.5rem 0px;
   text-decoration: none;
   color: var(--black-color);
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   line-height: 1.7;
   font-family: var(--primary-font);
 }
@@ -489,7 +492,7 @@ html {
 }
 .navbar_item_mobile:nth-child(9) .navbar_item_mobile_link span:nth-child(2) {
   font-family: var(--primary-font);
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
 }
 
 .navbar_btn_mobile {
@@ -506,7 +509,7 @@ html {
   border: none;
   font-weight: 600;
   color: var(--black-color);
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   line-height: 1.7;
   padding: 1.5rem 5.5rem;
   font-family: var(--primary-font);
@@ -602,7 +605,7 @@ html {
   padding: 1.7rem 5.7rem;
   border: none;
   outline: none;
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   font-family: var(--primary-font);
   font-weight: 600;
   word-wrap: break-word;
@@ -646,7 +649,7 @@ html {
   display: inline;
   margin-bottom: 0px;
   color: var(--white-color);
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   font-family: var(--primary-font);
   font-weight: 500;
   position: absolute;
@@ -657,7 +660,7 @@ html {
   content: "";
   left: 0;
   bottom: 0;
-  border: 1px solid #fff;
+  border: 1px solid var(--white-color);
   position: absolute;
   width: 100%;
 }
@@ -847,14 +850,14 @@ html {
 .top_deal_product_item_text .name {
   transition: all linear 0.2s;
   color: var(--black-color);
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   line-height: 2rem;
   word-wrap: break-word;
 }
 
 .top_deal_product_item_text .old-price {
   color: #8d979e;
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   font-family: var(--primary-font);
   font-weight: 500;
   text-decoration: line-through;
@@ -869,18 +872,19 @@ html {
   word-wrap: break-word;
 }
 .top_deal_product_item_text .star {
+  margin-top: 0.3rem;
   margin-bottom: 1rem;
 }
 
 .discount {
   color: var(--white-color);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-family: var(--primary-font);
   line-height: 1;
   font-weight: 500;
   word-wrap: break-word;
-  padding: 0.5rem 1.15rem;
-  background-color: var(--secondry-color);
+  padding: 0.6rem 1.15rem;
+  background-color: #dd3327;
   border-radius: 3rem;
   left: 0;
   top: 0;
@@ -960,9 +964,9 @@ html {
 .home_item_link {
   transition: all 0.2s linear;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   text-decoration: none;
-  color: #555;
+  color: var(--third-color);
   font-family: var(--primary-font);
 }
 
@@ -1005,7 +1009,7 @@ html {
   border-radius: 3px;
   opacity: 0;
   visibility: hidden;
-  background-color: white;
+  background-color: var(--white-color);
   left: 0;
   right: 0;
   top: 110%;
@@ -1035,7 +1039,7 @@ html {
 }
 
 .shop_main_text {
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   color: var(--black-color);
   font-weight: 600;
   font-family: var(--primary-font);
@@ -1054,7 +1058,7 @@ html {
   transition: all 0.2s linear;
   font-family: var(--primary-font);
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   transition: all linear 0.2s;
   display: block;
   padding: 0.7em 0px;
@@ -1073,7 +1077,7 @@ html {
 }
 
 .btn_shop {
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   transition: all linear 0.2s;
   transform: translateY(-50%);
   font-weight: 600;
@@ -1088,7 +1092,7 @@ html {
 }
 
 .btn_shop:hover {
-  color: white;
+  color: var(--white-color);
   background-color: var(--secondry-color);
 }
 
@@ -1125,14 +1129,14 @@ html {
 }
 .top_sell_text a {
   color: var(--secondry-color);
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
 }
 .top_sell_text a:hover {
   color: var(--secondry-color);
 }
 .top_sell_text {
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid #e5e8ec;
+  border-bottom: 1px solid var(--section-border-bottom);
 }
 .top_sell_product_list .star {
   line-height: 1;
@@ -1186,7 +1190,7 @@ a {
   color: var(--text-color);
 }
 .recomend_product_head_text .text span {
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
 }
 .rc-text:hover svg path {
   fill: var(--secondry-color);
@@ -1197,7 +1201,7 @@ a {
   top: -0.1rem;
 }
 .rc-text {
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   color: var(--text-color);
   font-family: var(--primary-font);
   font-weight: 500;
@@ -1210,7 +1214,7 @@ a {
 }
 
 .deal_promotion_head {
-  border-bottom: 1px solid #e5e8ec;
+  border-bottom: 1px solid var(--section-border-bottom);
 }
 
 .deal_promotion_head h2 {
@@ -1259,7 +1263,7 @@ a {
 .deal_text p:nth-child(2) {
   margin-bottom: 0px;
   color: var(--third-color);
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   font-family: var(--primary-font);
   font-weight: 500;
   line-height: 1.75;
@@ -1267,8 +1271,8 @@ a {
 }
 
 .payment {
-  border-bottom: 1px solid #e5e8ec;
-  border-top: 1px solid #e5e8ec;
+  border-bottom: 1px solid var(--section-border-bottom);
+  border-top: 1px solid var(--section-border-bottom);
   padding: 4rem 0px;
 }
 
@@ -1283,7 +1287,7 @@ a {
   width: 2px;
   top: 50%;
   transform: translateY(-50%);
-  border-right: 1px solid #e5e8ec;
+  border-right: 1px solid var(--section-border-bottom);
 }
 
 .payment-product:nth-child(1) .payment-item::before {
@@ -1311,7 +1315,7 @@ a {
 .payment-text p:nth-child(2) {
   margin-bottom: 0px;
   color: var(--third-color);
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
 }
 .carousel-indicators {
   z-index: 1 !important;
@@ -1396,7 +1400,7 @@ a {
 
 .footer_contact .question {
   color: var(--third-color);
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
@@ -1411,7 +1415,7 @@ a {
 
 .footer_contact .address {
   color: var(--third-color);
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   word-wrap: break-word;
   margin-bottom: 2rem;
 }
@@ -1468,7 +1472,7 @@ a {
 .last .language span {
   font-family: var(--primary-font);
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
 }
 .footer-payment .payment {
   border: none;
@@ -1523,12 +1527,12 @@ a {
   padding: 0px 30px;
 }
 .dp-item-link {
-  border-bottom: 1px solid #e5e8ec;
+  border-bottom: 1px solid var(--section-border-bottom);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0px;
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   font-family: var(--primary-font);
   color: var(--black-color);
   font-weight: 500;
@@ -1561,7 +1565,7 @@ a {
 .el_heading {
   display: block;
   padding-bottom: 10px;
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   color: var(--black-color);
   font-weight: 600;
   font-family: var(--primary-font);
@@ -1569,7 +1573,7 @@ a {
 .el_heading_link {
   display: block;
   padding: 5px 0px;
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   color: #555;
   font-weight: 500;
   font-family: var(--primary-font);
@@ -1599,7 +1603,7 @@ a {
 .home_menu_item_link {
   display: block;
   padding: 5px 15px;
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   color: #555;
   font-weight: 500;
   font-family: var(--primary-font);
@@ -1640,8 +1644,8 @@ a {
 .phone_menu_item_link {
   display: block;
   padding: 5px 15px;
-  font-size: 1.4rem;
-  color: #555;
+  font-size: var(--font-size-text);
+  color: var(--third-color);
   font-weight: 500;
   font-family: var(--primary-font);
   transition: all 0.2s linear;
