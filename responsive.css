@@ -382,7 +382,14 @@
     bottom: 2rem;
     z-index: 2;
   }
+  .deal_promotion{
+    padding-top: 30px;
+  }
+  .deal_promotion_head{
+    padding-bottom: 0px;
+  }
   #recomend_carouse_mobile {
+    margin-bottom: 50px;
     padding-top: 30px;
   }
   .product-purchase {
@@ -426,20 +433,25 @@
 
   #top_deal_carouse_mobile {
     padding-top: 30px !important;
-    padding-bottom: 30px !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 70px;
   }
 
   #top_deal_carouse_mobile .carousel-indicators {
     top: 100%;
   }
-
+  .top_deal_text{
+    padding-bottom: 0px;
+  }
+  .top_sell_text{
+    padding-bottom: 0px;
+  }
   .top_deal_product_item {
     padding: 0px 7.5px;
     width: 50%;
   }
-
-  .top_deal {
-    padding-top: 60px;
+  #top_sell_carouse_mobile{
+    margin-top: 30px;
   }
 
   .top_deal_product {
@@ -448,6 +460,9 @@
 
   .product_list {
     padding: 30px 7.5px;
+  }
+  #carouselExampleIndicators{
+    margin-bottom: 70px;
   }
 
   .carousel-indicators button {
