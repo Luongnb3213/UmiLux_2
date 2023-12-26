@@ -38,10 +38,10 @@
 
 @font-face {
   font-family: 'GeneralSans-Variable';
-  src: url('../../../../GeneralSans_Complete/Fonts/W../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Bold.woff2') format('woff2'),
-       url('../../../../GeneralSans_Complete/Fonts/W../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Variable.woff') format('woff'),
-       url('../../../../GeneralSans_Complete/Fonts/W../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Variable.ttf') format('truetype');
-       font-weight: 200;
+  src: url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Variable.woff2') format('woff2'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Variable.woff') format('woff'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Variable.ttf') format('truetype');
+       font-weight: 200 700;
        font-display: swap;
        font-style: normal;
 }
@@ -58,6 +58,15 @@
 
 */
 
+@font-face {
+  font-family: 'GeneralSans-VariableItalic';
+  src: url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-VariableItalic.woff2') format('woff2'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-VariableItalic.woff') format('woff'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-VariableItalic.ttf') format('truetype');
+       font-weight: 200 700;
+       font-display: swap;
+       font-style: italic;
+}
 
 
 @font-face {
@@ -65,9 +74,20 @@
   src: url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Extralight.woff2') format('woff2'),
        url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Extralight.woff') format('woff'),
        url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Extralight.ttf') format('truetype');
-       font-weight: 500;
+       font-weight: 200;
        font-display: swap;
        font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'GeneralSans-ExtralightItalic';
+  src: url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-ExtralightItalic.woff2') format('woff2'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-ExtralightItalic.woff') format('woff'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-ExtralightItalic.ttf') format('truetype');
+       font-weight: 200;
+       font-display: swap;
+       font-style: italic;
 }
 
 
@@ -83,17 +103,36 @@
 
 
 @font-face {
+  font-family: 'GeneralSans-LightItalic';
+  src: url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-LightItalic.woff2') format('woff2'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-LightItalic.woff') format('woff'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-LightItalic.ttf') format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
   font-family: 'GeneralSans-Regular';
   src: url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Regular.woff2') format('woff2'),
        url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Regular.woff') format('woff'),
        url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Regular.ttf') format('truetype');
-       font-weight: 500;
+       font-weight: 400;
        font-display: swap;
        font-style: normal;
 }
 
 
-
+@font-face {
+  font-family: 'GeneralSans-Italic';
+  src: url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Italic.woff2') format('woff2'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Italic.woff') format('woff'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Italic.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: italic;
+}
 
 
 @font-face {
@@ -107,7 +146,15 @@
 }
 
 
-
+@font-face {
+  font-family: 'GeneralSans-MediumItalic';
+  src: url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-MediumItalic.woff2') format('woff2'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-MediumItalic.woff') format('woff'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-MediumItalic.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: italic;
+}
 
 
 @font-face {
@@ -121,6 +168,15 @@
 }
 
 
+@font-face {
+  font-family: 'GeneralSans-SemiboldItalic';
+  src: url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-SemiboldItalic.woff2') format('woff2'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-SemiboldItalic.woff') format('woff'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-SemiboldItalic.ttf') format('truetype');
+       font-weight: 600;
+       font-display: swap;
+       font-style: italic;
+}
 
 
 @font-face {
@@ -134,4 +190,13 @@
 }
 
 
+@font-face {
+  font-family: 'GeneralSans-BoldItalic';
+  src: url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-BoldItalic.woff2') format('woff2'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-BoldItalic.woff') format('woff'),
+       url('../../../../GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-BoldItalic.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: italic;
+}
 

@@ -16,6 +16,9 @@
   .container-xxl {
     max-width: 1410px !important;
   }
+  .footer_icon{
+    display: none;
+  }
 }
 @media screen and (min-width: 1024px) {
   .icon-block {
@@ -60,6 +63,15 @@
 }
 
 @media (max-width: 1199.5px) {
+  .icon i::before{
+     font-size: 18px;
+  }
+  .navbar_item_list_head{
+    padding-left: 35px;
+  }
+  .navbar_item_mobile{
+    padding-left: 15px;
+  }
   .top_deal_product {
     display: none;
   }
@@ -83,9 +95,12 @@
   }
 
   .item_mobile_list .navbar_item_list_head a {
-    color: var(--black-color);
+    color: var(--black-color) !important;
+    opacity: 0.6;
     font-weight: bold;
     font-size: 1.4rem;
+    line-height: 1.5;
+    text-transform: capitalize;
   }
 
   .item_mobile_list .navbar_item_list_head .close_item {
@@ -94,15 +109,26 @@
   }
 
   .item_mobile_list .navbar_item_list_mobile .navbar_item_mobile_link {
-    color: #555;
+    padding-left: 15px;
+    color: var(--black-color);
+    font-weight: 500;
+    border-bottom: 1px solid #ebebeb;
   }
 
   /* item_moblie */
   .rotate {
     transform: rotate(180deg);
   }
-
+  .navbar_mobile i::before{
+    font-size: 15px;
+    color: var(--white-color);
+   
+  }
+  .navbar_mobile i{
+    vertical-align: middle;
+  }
   .navbar_mobile {
+  
     padding-left: 0px !important;
   }
 
@@ -128,7 +154,10 @@
 }
 
 @media screen and (min-width: 1023px) and (max-width: 1439px) {
-  .header_mid_input .searchBar svg {
+  .footer_icon{
+    display: none;
+  }
+  .header_mid_input .searchBar i{
     left: 2rem;
   }
   .header_mid_input .searchBar input{
@@ -166,7 +195,16 @@
 }
 /* tablet */
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
-  .header_mid_input .searchBar svg {
+  .footer_help i{
+    font-size: 8px;
+  }
+  .footer_help i::before{
+    color: #555555;
+  }
+  .top_deal_product_item:hover .top_deal_product_item_img .icon-block {
+    right: 5%;
+  }
+  .header_mid_input .searchBar i{
     left: 2rem;
   }
   .header_mid_input .searchBar input{
@@ -186,6 +224,7 @@
   }
   .footer {
     padding: 60px 15px;
+    padding-bottom: 0px;
   }
 
   #carouselExampleIndicators,
@@ -198,7 +237,8 @@
     font-size: 1.6rem;
   }
   .icon-block-item {
-    margin-left: 5px;
+    padding: 12px;
+    margin-left: 8px;
   }
   .icon-block {
     justify-content: center;
@@ -266,7 +306,7 @@
     width: 50%;
   }
 
-  .footer_help h2 {
+  .footer_help h4 {
     margin-bottom: 0px;
   }
   .main-img-item h1 {
@@ -277,7 +317,7 @@
   }
   .footer_help{
     padding: 20px 0px;
-    border-bottom: 1px solid #e5e8ce;
+    border-bottom: 1px solid var(--section-border-bottom);
   }
   .footer_list {
     margin-top: 0px;
@@ -293,7 +333,20 @@
 /* mobile */
 
 @media only screen and (max-width: 739.5px) {
-  .footer_contact h3{
+  .back-top_icon{
+    font-size: 8px;
+  }
+  .footer_help i{
+    font-size: 8px;
+  }
+  .footer_help i::before{
+    color: #555555;
+  }
+ 
+  .top_deal_product_item:hover .top_deal_product_item_img .icon-block {
+    right: 5%;
+  }
+  .footer_contact h4{
     margin-bottom: 25px;
   }
   .deal_promotion,
@@ -304,6 +357,7 @@
   }
   .footer {
     padding: 60px 7.5px;
+    padding-bottom: 35px;
   }
 
   .rc-text {
@@ -316,7 +370,8 @@
     display: none;
   }
   .icon-block-item {
-    margin-left: 5px;
+    padding: 12px;
+    margin-left: 8px;
   }
   .icon-block {
     justify-content: center;
@@ -334,14 +389,12 @@
     text-align: center;
     margin-bottom: 10px;
   }
-  .footer {
-    padding-bottom: 80px;
-  }
+
   .footer_help{
     padding: 20px 0px;
-    border-bottom: 1px solid #e5e8ce;
+    border-bottom: 1px solid var(--section-border-bottom);
   }
-  .footer_help h2 {
+  .footer_help h4 {
     margin-bottom: 0px;
   }
   .footer_list {
@@ -355,6 +408,8 @@
     margin-top: 15px;
   }
   .last{
+    padding-top:0px;
+    padding-bottom: 60px;
     border: none;
   }
   .mobile-footer_item_text {
@@ -367,10 +422,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 6px 10px;
+    padding: 8px 10px;
+  }
+  .mobile-footer_item i::before{
+    
+     color: var(--black-color);
+  }
+  .mobile-footer_item i{
+    font-size: 18px;
   }
   .mobile-footer_item .number-item {
-    top: 0;
+    top: -6px;
   }
   .mobile-footer-list {
     margin-bottom: 0px;
@@ -538,7 +600,7 @@
   .header_mid_input .searchBar input{
     padding: 1rem 0rem 1rem 4.5rem;
   }
-  .header_mid_input .searchBar svg {
+  .header_mid_input .searchBar i{
     left: 2rem;
   }
   .payment-item::before {

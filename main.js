@@ -8,8 +8,27 @@ const footer_icon = document.querySelectorAll(".footer_icon");
 const header_mid = document.querySelector(".header_mid");
 const header_mid_before = window.getComputedStyle(header_mid, "::before");
 const mobile_footer = document.querySelector(".mobile-footer");
-
-// lay phan tu pesudo element
+const menu = document.querySelector("#menu");
+const category = document.querySelector("#category");
+const menu_mobile = document.querySelector(".menu-mobile");
+const category_mobile = document.querySelector(".category-mobile");
+menu.onclick = function () {
+  if (!menu.classList.contains("active")) {
+    category.classList.remove("active");
+    menu.classList.add("active");
+    menu_mobile.classList.toggle("mobile-item-close");
+    menu_mobile.style.display = "block";
+    category_mobile.classList.toggle("mobile-item-close");
+  }
+};
+category.onclick = function () {
+  if (!category.classList.contains("active")) {
+    menu.classList.remove("active");
+    category.classList.add("active");
+    menu_mobile.style.display = "none";
+    category_mobile.classList.toggle("mobile-item-close");
+  }
+};
 
 if (navbar_mobile) {
   navbar_mobile.onclick = function () {
@@ -92,7 +111,27 @@ const mobile_item = {
   ],
   Digital_01: ["Digital 1", "Digital 2"],
   Usd: ["EUR", "JPY", "NZD"],
+  Computer: ["Laptop & Computers", "Home Audio", "Cameras", "Smart Phone"],
+  Tablet: ["Cameras", "Home Audio", "Smart Phone", "Laptop & Computers"],
+  Printer: [
+    "Carrier Phones",
+    "Unlocked Phones",
+    "Phone & CellPhone",
+    "CellPhone Charges",
+    "Your Video Library",
+    "Watch Anywhere",
+  ],
+  Smart: [
+    "Wireless Audio",
+    "Premium Audio",
+    "Stereo systems components",
+    "Headphones",
+    "Speakers",
+    "Projectors and Screens",
+    "Turntables",
+  ],
 };
+// --------------------------------------------------------------product-mobile-items --------------------------------------------------------------
 function item_slidein() {
   var item_list = document.querySelectorAll(
     ".navbar_item_list .navbar_item_list_mobile .navbar_item_mobile_link[id]"
@@ -116,7 +155,8 @@ function item_slidein() {
       navbar_item_list_head.classList.add(
         "navbar_item_list_head",
         "d-flex",
-        "align-items-center"
+        "align-items-center",
+        "justify-content-start"
       );
       let close_item = document.createElement("span");
       close_item.innerHTML = ` <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#111111"
@@ -146,7 +186,7 @@ function item_slidein() {
         navbar_item_mobile.classList.add("navbar_item_mobile");
         let navbar_item_mobile_link = document.createElement("a");
         navbar_item_mobile_link.classList.add("navbar_item_mobile_link");
-        navbar_item_mobile_link.href = "";
+        navbar_item_mobile_link.href = "#";
         navbar_item_mobile_link.innerHTML = i;
         navbar_item_mobile.appendChild(navbar_item_mobile_link);
         navbar_item_list_mobile.appendChild(navbar_item_mobile);
@@ -169,7 +209,10 @@ function item_slidein() {
   });
 }
 
-///////////////////////////////////////
+
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 var check = true;
 
 window.addEventListener("scroll", () => {
@@ -245,7 +288,7 @@ var product_auto = setInterval(() => {
   product_purchase.innerHTML = ` <div class="row gx-1">
     <div class="col-3 d-flex align-items-center">
       <a href="" class="product-purchase_image">
-        <img src="${randomProduct.img}" class="w-100" />
+        <img src="${randomProduct.img}" class="w-100" alt="Phone" />
       </a>
     </div>
     <div class="col-9">
@@ -293,6 +336,7 @@ header_bot_left.onclick = () => {
   dp_item_list.classList.toggle("dp_item_list_shown");
   layer_item.classList.toggle("layer_item_go_in");
 };
+
 if (layer_item) {
   layer_item.onclick = () => {
     header_bot_left.click();
@@ -303,8 +347,15 @@ header_mid.onclick = (e) => {
     if (close) {
       close.click();
     }
+    var close_item = document.querySelector(".close_item");
+    if (close_item) {
+      close_item.click();
+    }
   }
 };
+
+
+
 
 function countDown() {
   var day = document.getElementById("day");
@@ -326,28 +377,22 @@ function countDown() {
     hours = String(hours).padStart(2, "0");
     minutes = String(minutes).padStart(2, "0");
     seconds = String(seconds).padStart(2, "0");
-     day.innerHTML = days
-     minute.innerHTML = minutes 
-     hour.innerHTML = hours
-     second.innerHTML = seconds
+    day.innerHTML = days;
+    minute.innerHTML = minutes;
+    hour.innerHTML = hours;
+    second.innerHTML = seconds;
   }, 1000);
 }
-countDown()
+countDown();
 
-const header =  document.querySelector('header')
-window.addEventListener('scroll', function(){
-  let header_top_list = document.querySelector('.header-top-list')
+
+
+
+
+const header = document.querySelector("header");
+window.addEventListener("scroll", function () {
+  let header_top_list = document.querySelector(".header-top-list");
   let computedStyle = window.getComputedStyle(header_top_list);
-  if(computedStyle.display === 'block'){
-    if(header.classList.contains('sticky_mobile')){
-      header.classList.remove('sticky_mobile')
-    }
-    header.classList.toggle('sticky',this.window.scrollY > 0)
-  }else{
-    if(header.classList.contains('sticky')){
-      header.classList.remove('sticky')
-    }
-    header.classList.toggle('sticky_mobile',this.window.scrollY > 0)
-  }
- 
-})
+  header.classList.toggle("sticky", this.window.scrollY > 0);
+  header_top_list.classList.toggle("d-none", this.window.scrollY > 0);
+});
