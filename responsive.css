@@ -14,7 +14,7 @@
     display: none;
   }
   .container-xxl {
-    max-width: 1410px !important;
+    max-width: 1425px !important;
   }
   .footer_icon{
     display: none;
@@ -67,10 +67,10 @@
      font-size: 18px;
   }
   .navbar_item_list_head{
-    padding-left: 35px;
+    padding-left: 30px;
   }
   .navbar_item_mobile{
-    padding-left: 15px;
+    padding-left: 30px;
   }
   .top_deal_product {
     display: none;
@@ -109,7 +109,6 @@
   }
 
   .item_mobile_list .navbar_item_list_mobile .navbar_item_mobile_link {
-    padding-left: 15px;
     color: var(--black-color);
     font-weight: 500;
     border-bottom: 1px solid #ebebeb;
@@ -196,7 +195,7 @@
 /* tablet */
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
   .footer_help i{
-    font-size: 8px;
+    font-size: 6px;
   }
   .footer_help i::before{
     color: #555555;
@@ -306,7 +305,7 @@
     width: 50%;
   }
 
-  .footer_help h4 {
+  .footer_help h3 {
     margin-bottom: 0px;
   }
   .main-img-item h1 {
@@ -337,7 +336,7 @@
     font-size: 8px;
   }
   .footer_help i{
-    font-size: 8px;
+    font-size: 6px;
   }
   .footer_help i::before{
     color: #555555;
@@ -346,7 +345,7 @@
   .top_deal_product_item:hover .top_deal_product_item_img .icon-block {
     right: 5%;
   }
-  .footer_contact h4{
+  .footer_contact h3{
     margin-bottom: 25px;
   }
   .deal_promotion,
@@ -394,7 +393,7 @@
     padding: 20px 0px;
     border-bottom: 1px solid var(--section-border-bottom);
   }
-  .footer_help h4 {
+  .footer_help h3 {
     margin-bottom: 0px;
   }
   .footer_list {
