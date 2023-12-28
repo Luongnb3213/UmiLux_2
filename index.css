@@ -610,15 +610,18 @@ html {
 .navbar_item_list_head span {
   position: relative;
   top: -1px;
-  display: inline-block;
   margin-right: 8px;
-  transform: rotate(180deg);
+  display: inline-block;
   text-decoration: none;
   color: #b9b7b7;
   font-size: 1.2rem;
   line-height: 1;
   font-family: var(--primary-font);
   font-weight: 600;
+}
+.close_item{
+  transform: rotate(180deg);
+  margin-right: 8px;
 }
 .navbar_item_list_head .active {
   color: var(--white-color);
@@ -1929,5 +1932,6 @@ a {
 }
 
 .navbar_item_list_head .close {
-  padding-right: 2.5rem;
+  padding-right: 2.3rem;
+  margin-right: 0;
 }

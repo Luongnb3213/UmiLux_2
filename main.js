@@ -14,23 +14,13 @@ const menu_mobile = document.querySelector(".menu-mobile");
 const category_mobile = document.querySelector(".category-mobile");
 const main = document.querySelector("main");
 var body = document.querySelector("body");
-menu.onclick = function () {
-  if (!menu.classList.contains("active")) {
-    category.classList.remove("active");
-    menu.classList.add("active");
-    menu_mobile.classList.toggle("mobile-item-close");
-    menu_mobile.style.display = "block";
-    category_mobile.classList.toggle("mobile-item-close");
-  }
-};
-category.onclick = function () {
-  if (!category.classList.contains("active")) {
-    menu.classList.remove("active");
-    category.classList.add("active");
-    menu_mobile.style.display = "none";
-    category_mobile.classList.toggle("mobile-item-close");
-  }
-};
+const header = document.querySelector("header");
+const layer_item = document.querySelector(".layer_item");
+const header_bot_left = document.querySelector(".header_bot_left");
+
+/* ======================================== 
+    NAVBARS BUTTONS
+   ====================================== */
 
 if (navbar_mobile) {
   navbar_mobile.onclick = function () {
@@ -47,6 +37,7 @@ if (navbar_mobile) {
     // mobile
   };
 }
+
 if (close) {
   close.onclick = function () {
     navbar.classList.remove("slidein");
@@ -62,26 +53,7 @@ if (close) {
     });
   };
 }
-if (footer_icon) {
-  footer_icon.forEach((i) => {
-    i.onclick = function () {
-      let parentElement = i.parentElement.parentElement;
-      let footer_list = parentElement.querySelector(".footer_list");
-      // window.getComputedStyle để lấy giá trị của thuộc tính từ kiểu đã tính
-      //  (computed style) thay vì từ thuộc tính trực tiếp được thiết lập trong
-      //  style attribute.
-      // Ví dụ: ở trên nếu sử dụng  footer_list.style.maxHeight thì sẽ ra là = "" nên cần sử dụng  window.getComputedStyle để nó lấy luôn giá trị đã tính
-      let computedStyle = window.getComputedStyle(footer_list);
 
-      footer_list.style.maxHeight =
-        computedStyle.maxHeight === "0px"
-          ? footer_list.scrollHeight + "px"
-          : "0";
-      footer_list.classList.toggle("footer-list-padding");
-      this.classList.toggle("rotate");
-    };
-  });
-}
 const mobile_item = {
   Home: [
     "Main Demo",
@@ -135,7 +107,26 @@ const mobile_item = {
     "Turntables",
   ],
 };
-// --------------------------------------------------------------product-mobile-items --------------------------------------------------------------
+
+menu.onclick = function () {
+  if (!menu.classList.contains("active")) {
+    category.classList.remove("active");
+    menu.classList.add("active");
+    menu_mobile.classList.toggle("mobile-item-close");
+    menu_mobile.style.display = "block";
+    category_mobile.classList.toggle("mobile-item-close");
+  }
+};
+
+category.onclick = function () {
+  if (!category.classList.contains("active")) {
+    menu.classList.remove("active");
+    category.classList.add("active");
+    menu_mobile.style.display = "none";
+    category_mobile.classList.toggle("mobile-item-close");
+  }
+};
+
 function item_slidein() {
   var item_list = document.querySelectorAll(
     ".navbar_item_list .navbar_item_list_mobile .navbar_item_mobile_link[id]"
@@ -208,9 +199,85 @@ function item_slidein() {
   });
 }
 
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
-var check = true;
+var check1 = true;
+header_bot_left.onclick = function (e) {
+  let dp_item_list = document.querySelector(".dp_item_list");
+  let computedStyle = window.getComputedStyle(dp_item_list);
 
+  dp_item_list.style.maxHeight =
+    computedStyle.maxHeight === "0px" ? dp_item_list.scrollHeight + "px" : "0";
+  if (check1) {
+    dp_item_list.addEventListener(
+      "transitionend",
+      () => {
+        dp_item_list.classList.add("dp_item_list_shown");
+      },
+      { capture: false, once: true, passive: false }
+    );
+
+    check1 = false;
+  } else {
+    e.preventDefault();
+    dp_item_list.classList.remove("dp_item_list_shown");
+    check1 = true;
+  }
+
+  layer_item.classList.toggle("layer_item_go_in");
+};
+
+if (layer_item) {
+  layer_item.onclick = (e) => {
+    console.log(e.target);
+    header_bot_left.click();
+  };
+}
+header_mid.onclick = (e) => {
+  if (e.target.classList.contains("header_mid")) {
+    if (close) {
+      close.click();
+    }
+    var close_item = document.querySelector(".close_item");
+    if (close_item) {
+      close_item.click();
+    }
+  }
+};
+
+/* ======================================== 
+  END NAVBARS BUTTONS
+   ====================================== */
+
+/* ======================================== 
+    FOOTER
+   ====================================== */
+if (footer_icon) {
+  footer_icon.forEach((i) => {
+    i.onclick = function () {
+      let parentElement = i.parentElement.parentElement;
+      let footer_list = parentElement.querySelector(".footer_list");
+      // window.getComputedStyle để lấy giá trị của thuộc tính từ kiểu đã tính
+      //  (computed style) thay vì từ thuộc tính trực tiếp được thiết lập trong
+      //  style attribute.
+      // Ví dụ: ở trên nếu sử dụng  footer_list.style.maxHeight thì sẽ ra là = "" nên cần sử dụng  window.getComputedStyle để nó lấy luôn giá trị đã tính
+      let computedStyle = window.getComputedStyle(footer_list);
+
+      footer_list.style.maxHeight =
+        computedStyle.maxHeight === "0px"
+          ? footer_list.scrollHeight + "px"
+          : "0";
+      footer_list.classList.toggle("footer-list-padding");
+      this.classList.toggle("rotate");
+    };
+  });
+}
+/* ======================================== 
+   END FOOTER
+   ====================================== */
+
+/* ======================================== 
+    SCROLL
+   ====================================== */
+var check = true;
 window.addEventListener("scroll", () => {
   const windowHeight = document.documentElement.clientHeight;
   const maxScrollHeight = document.documentElement.scrollHeight - windowHeight;
@@ -241,13 +308,25 @@ window.addEventListener("scroll", () => {
   const test = document.querySelector(".bls_back-top");
 
   test.style.height = `${percentage}%`;
+
+  let header_top_list = document.querySelector(".header-top-list");
+  let computedStyle = window.getComputedStyle(header_top_list);
+  header.classList.toggle("sticky", this.window.scrollY > 0);
+  header_top_list.classList.toggle("d-none", this.window.scrollY > 0);
 });
-// Hàm để tạo số nguyên ngẫu nhiên từ 1 đến n
+
+/* ======================================== 
+   END SCROLL
+   ====================================== */
+
+/* ======================================== 
+    AUTOBUY
+   ====================================== */
+
 function getRandomInt(n) {
   return Math.floor(Math.random() * n);
 }
 
-//  auto buy
 const product = [
   {
     name: "Galaxy S21 Ultra 5G 128GB Unlocked International Version",
@@ -323,53 +402,9 @@ var product_auto = setInterval(() => {
   };
 }, 8000);
 
-const layer_item = document.querySelector(".layer_item");
-const header_bot_left = document.querySelector(".header_bot_left");
-
-var check1 = true;
-header_bot_left.onclick = () => {
-  let dp_item_list = document.querySelector(".dp_item_list");
-  let computedStyle = window.getComputedStyle(dp_item_list);
-
-  dp_item_list.style.maxHeight =
-    computedStyle.maxHeight === "0px" ? dp_item_list.scrollHeight + "px" : "0";
-  if (check1) {
-    dp_item_list.addEventListener(
-      "transitionend",
-      () => {
-        dp_item_list.classList.add("dp_item_list_shown");
-      },
-      { capture: false, once: true, passive: false }
-    );
-    // setTimeout(() => {
-    //   dp_item_list.classList.add("dp_item_list_shown");
-    // }, 300);
-    check1 = false;
-  } else {
-    dp_item_list.classList.remove("dp_item_list_shown");
-    check1 = true;
-  }
-
-  layer_item.classList.toggle("layer_item_go_in");
-};
-
-if (layer_item) {
-  layer_item.onclick = (e) => {
-    console.log(e.target)
-    header_bot_left.click();
-  };
-}
-header_mid.onclick = (e) => {
-  if (e.target.classList.contains("header_mid")) {
-    if (close) {
-      close.click();
-    }
-    var close_item = document.querySelector(".close_item");
-    if (close_item) {
-      close_item.click();
-    }
-  }
-};
+/* ======================================== 
+        END AUTOBUY
+   ====================================== */
 
 function countDown() {
   var day = document.getElementById("day");
@@ -398,11 +433,3 @@ function countDown() {
   }, 1000);
 }
 countDown();
-
-const header = document.querySelector("header");
-window.addEventListener("scroll", function () {
-  let header_top_list = document.querySelector(".header-top-list");
-  let computedStyle = window.getComputedStyle(header_top_list);
-  header.classList.toggle("sticky", this.window.scrollY > 0);
-  header_top_list.classList.toggle("d-none", this.window.scrollY > 0);
-});
