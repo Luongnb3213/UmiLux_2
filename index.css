@@ -1347,7 +1347,7 @@ html {
   color: var(--secondry-color);
 }
 .top_sell_text {
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid var(--section-border-bottom);
 }
 .top_sell_product_list .star {
@@ -1356,7 +1356,7 @@ html {
 a {
   text-decoration: none !important;
 }
-.top_sell_text p {
+.top_sell_text {
   display: inline-block;
   color: var(--secondry-color);
   font-size: var(--font-size-text);
@@ -1366,7 +1366,7 @@ a {
   margin-bottom: 0px;
 }
 
-.top_sell_text p i {
+.top_sell_text i {
   transition: all 0.2s linear;
   font-size: 9px;
   position: relative;
