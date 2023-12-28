@@ -1,6 +1,9 @@
 
 
 @media (min-width: 1200px) {
+  .footer_icon{
+    display: none;
+  }
   #carouselExampleIndicators,
   #top_deal_carouse_mobile,
   #top_sell_carouse_mobile,
@@ -63,6 +66,29 @@
 }
 
 @media (max-width: 1199.5px) {
+  .last{
+    border: none;
+  }
+  .footer_help i{
+    font-size: 6px;
+  }
+  .footer_help i::before{
+    color: #555555;
+  }
+  .footer_list {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s linear;
+  }
+  .footer_help{
+    padding: 20px 0px;
+    border-bottom: 1px solid var(--section-border-bottom);
+  }
+  .footer-list-padding{
+    margin-top: 15px;
+  }
   .icon i::before{
      font-size: 18px;
   }
@@ -102,12 +128,6 @@
     line-height: 1.5;
     text-transform: capitalize;
   }
-
-  .item_mobile_list .navbar_item_list_head .close_item {
-    position: relative;
-    top: -2px;
-  }
-
   .item_mobile_list .navbar_item_list_mobile .navbar_item_mobile_link {
     color: var(--black-color);
     font-weight: 500;
@@ -142,20 +162,17 @@
     padding: 1rem 0rem 1rem 1.4rem;
   }
   .header_mid_input button{
-    padding: 0.9rem 2.5rem;
+    padding: 0.95rem 2.5rem;
   }
 
   .header_mid {
     padding: 25px 0px;
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 1439px) {
-}
 
 @media screen and (min-width: 1023px) and (max-width: 1439px) {
-  .footer_icon{
-    display: none;
-  }
+
+ 
   .header_mid_input .searchBar i{
     left: 2rem;
   }
@@ -194,12 +211,7 @@
 }
 /* tablet */
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
-  .footer_help i{
-    font-size: 6px;
-  }
-  .footer_help i::before{
-    color: #555555;
-  }
+
   .top_deal_product_item:hover .top_deal_product_item_img .icon-block {
     right: 5%;
   }
@@ -207,7 +219,7 @@
     left: 2rem;
   }
   .header_mid_input .searchBar input{
-    padding: 1rem 0rem 1rem 5.4rem;
+    padding: 1.025rem 0rem 1.025rem 5.4rem;
   }
   .deal_promotion,
   .header,
@@ -311,23 +323,7 @@
   .main-img-item h1 {
     font-size: 4rem;
   }
-  .last{
-    border: none;
-  }
-  .footer_help{
-    padding: 20px 0px;
-    border-bottom: 1px solid var(--section-border-bottom);
-  }
-  .footer_list {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    max-height: 0px;
-    overflow: hidden;
-    transition: all 0.3s linear;
-  }
-  .footer-list-padding{
-    margin-top: 15px;
-  }
+
 }
 /* mobile */
 
@@ -335,13 +331,6 @@
   .back-top_icon{
     font-size: 8px;
   }
-  .footer_help i{
-    font-size: 6px;
-  }
-  .footer_help i::before{
-    color: #555555;
-  }
- 
   .top_deal_product_item:hover .top_deal_product_item_img .icon-block {
     right: 5%;
   }
@@ -597,7 +586,7 @@
     font-size: 1.3rem;
   }
   .header_mid_input .searchBar input{
-    padding: 1rem 0rem 1rem 4.5rem;
+    padding: 1.025rem 0rem 1.025rem 4.5rem;
   }
   .header_mid_input .searchBar i{
     left: 2rem;

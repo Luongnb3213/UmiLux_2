@@ -12,6 +12,8 @@ const menu = document.querySelector("#menu");
 const category = document.querySelector("#category");
 const menu_mobile = document.querySelector(".menu-mobile");
 const category_mobile = document.querySelector(".category-mobile");
+const main = document.querySelector("main");
+var body = document.querySelector("body");
 menu.onclick = function () {
   if (!menu.classList.contains("active")) {
     category.classList.remove("active");
@@ -39,6 +41,7 @@ if (navbar_mobile) {
     navbar.classList.add("slidein");
     header_mid.classList.add("layer_in");
 
+    document.body.style.overflow = "hidden";
     // mobile
     item_slidein();
     // mobile
@@ -50,6 +53,7 @@ if (close) {
     navbar.classList.add("slideout");
     header_mid.classList.remove("layer_in");
     mobile_footer.classList.remove("d-none");
+    document.body.style.overflow = "";
     let navbar_item_mobile_link_list = document.querySelectorAll(
       ".navbar_item_mobile_link"
     );
@@ -159,12 +163,7 @@ function item_slidein() {
         "justify-content-start"
       );
       let close_item = document.createElement("span");
-      close_item.innerHTML = ` <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#111111c2"
-             stroke="#111111c2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-             style="transform: translateY(-50%); margin-top: 22px">
-             <line x1="18" y1="6" x2="6" y2="18"></line>
-             <line x1="6" y1="6" x2="18" y2="18"></line>
-           </svg>`;
+      close_item.innerHTML = ` <i class="icon-arrow-left"></i>`;
       close_item.classList.add("close_item");
       var title = document.createElement("a");
 
@@ -208,9 +207,6 @@ function item_slidein() {
     };
   });
 }
-
-
-
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 var check = true;
@@ -329,16 +325,37 @@ var product_auto = setInterval(() => {
 
 const layer_item = document.querySelector(".layer_item");
 const header_bot_left = document.querySelector(".header_bot_left");
+
+var check1 = true;
 header_bot_left.onclick = () => {
   let dp_item_list = document.querySelector(".dp_item_list");
   let computedStyle = window.getComputedStyle(dp_item_list);
 
-  dp_item_list.classList.toggle("dp_item_list_shown");
+  dp_item_list.style.maxHeight =
+    computedStyle.maxHeight === "0px" ? dp_item_list.scrollHeight + "px" : "0";
+  if (check1) {
+    dp_item_list.addEventListener(
+      "transitionend",
+      () => {
+        dp_item_list.classList.add("dp_item_list_shown");
+      },
+      { capture: false, once: true, passive: false }
+    );
+    // setTimeout(() => {
+    //   dp_item_list.classList.add("dp_item_list_shown");
+    // }, 300);
+    check1 = false;
+  } else {
+    dp_item_list.classList.remove("dp_item_list_shown");
+    check1 = true;
+  }
+
   layer_item.classList.toggle("layer_item_go_in");
 };
 
 if (layer_item) {
-  layer_item.onclick = () => {
+  layer_item.onclick = (e) => {
+    console.log(e.target)
     header_bot_left.click();
   };
 }
@@ -353,9 +370,6 @@ header_mid.onclick = (e) => {
     }
   }
 };
-
-
-
 
 function countDown() {
   var day = document.getElementById("day");
@@ -384,10 +398,6 @@ function countDown() {
   }, 1000);
 }
 countDown();
-
-
-
-
 
 const header = document.querySelector("header");
 window.addEventListener("scroll", function () {
