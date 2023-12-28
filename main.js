@@ -317,8 +317,8 @@ window.addEventListener("scroll", () => {
 
   let header_top_list = document.querySelector(".header-top-list");
   let computedStyle = window.getComputedStyle(header_top_list);
-  header.classList.toggle("sticky", this.window.scrollY > 0);
-  header_top_list.classList.toggle("d-none", this.window.scrollY > 0);
+  header.classList.toggle("sticky", this.window.scrollY > 100);
+  header_top_list.classList.toggle("d-none", this.window.scrollY > 100);
 });
 
 /* ======================================== 
