@@ -147,8 +147,7 @@
     vertical-align: middle;
   }
   .navbar_mobile {
-  
-    padding-left: 0px !important;
+    padding-right: 20px;
   }
 
   .header-top-list {
@@ -328,6 +327,9 @@
 /* mobile */
 
 @media only screen and (max-width: 739.5px) {
+  .top_sell_text h2,.top_deal_text h2{
+    font-size: 2.4rem;
+  }
   .back-top_icon{
     font-size: 8px;
   }
@@ -348,9 +350,6 @@
     padding-bottom: 35px;
   }
 
-  .rc-text {
-    display: none;
-  }
   #carousel_tablet,
   #top_deal_carousel_tablet,
   #top_sell_carouse_tablet,
