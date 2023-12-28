@@ -949,10 +949,10 @@ html {
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--section-border-bottom);
 }
-.top_deal_text p i {
+.top_deal_text  i {
   font-size: 9px;
 }
-.top_deal_text p i::before {
+.top_deal_text  i::before {
   color: var(--text-color);
 }
 .top_deal_text h2 {
