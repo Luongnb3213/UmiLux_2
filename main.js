@@ -203,8 +203,9 @@ var check1 = true;
 header_bot_left.onclick = function (e) {
   let dp_item_list = document.querySelector(".dp_item_list");
   let computedStyle = window.getComputedStyle(dp_item_list);
-
-  dp_item_list.style.maxHeight =
+  console.log(e.target)
+  if(e.target.closest(".header_bot_left_item")){
+    dp_item_list.style.maxHeight =
     computedStyle.maxHeight === "0px" ? dp_item_list.scrollHeight + "px" : "0";
   if (check1) {
     dp_item_list.addEventListener(
@@ -223,12 +224,17 @@ header_bot_left.onclick = function (e) {
   }
 
   layer_item.classList.toggle("layer_item_go_in");
+  }
+
 };
 
 if (layer_item) {
   layer_item.onclick = (e) => {
-    console.log(e.target);
-    header_bot_left.click();
+    if(e.target.classList.contains("layer_item")){
+      console.log("hi")
+      header_bot_left.click();
+    }
+   
   };
 }
 header_mid.onclick = (e) => {
