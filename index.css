@@ -267,12 +267,10 @@ html {
 }
 @keyframes header_go_up {
   from {
-
     transform: translateY(-100%);
   }
 
   to {
-
     transform: none;
   }
 }
@@ -619,7 +617,7 @@ html {
   font-family: var(--primary-font);
   font-weight: 600;
 }
-.close_item{
+.close_item {
   transform: rotate(180deg);
   margin-right: 8px;
 }
@@ -949,10 +947,10 @@ html {
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--section-border-bottom);
 }
-.top_deal_text  i {
+.top_deal_text i {
   font-size: 9px;
 }
-.top_deal_text  i::before {
+.top_deal_text i::before {
   color: var(--text-color);
 }
 .top_deal_text h2 {
@@ -1011,7 +1009,7 @@ html {
 }
 
 .top_deal_product_item_img img {
-  transition: opacity linear 0.5s;
+  transition: all linear 0.3s;
 }
 
 .top_deal_product_item_img img:nth-child(2) {
@@ -1026,6 +1024,7 @@ html {
 }
 
 .top_deal_product_item_img:hover img:nth-child(2) {
+  transform: scale(1.04);
   opacity: 1;
 }
 /* top_sell hover */
@@ -1036,12 +1035,13 @@ html {
   opacity: 0;
 }
 .top_sell_product_img img {
-  transition: opacity linear 0.5s;
+  transition: all linear 0.3s;
 }
 .top_sell_product_img:hover img:nth-child(1) {
   opacity: 0;
 }
 .top_sell_product_img:hover img:nth-child(2) {
+  transform: scale(1.02);
   opacity: 1;
 }
 .top_deal_product_item_text p {
@@ -1117,10 +1117,6 @@ html {
   padding: 0px 0.5rem;
 }
 
-.top_sell_product_img .discount {
-  top: -4%;
-}
-
 .top_deal_product_item_text {
   flex: 1;
 }
@@ -1134,15 +1130,21 @@ html {
 .page-item-list,
 .blog-item-list {
   width: 300%;
-  top: 5.6rem;
-  padding: 1rem 0px;
+  top: 4.6rem;
   right: 0;
   left: 0;
   z-index: 6;
   visibility: hidden;
+  opacity: 0;
+  padding: 1rem 0px;
   background-color: white;
   transition: all linear 0.2s;
-  opacity: 0;
+}
+
+.home:hover .home-item-list {
+  opacity: 1;
+  visibility: visible;
+  top: calc(100% + 1.6rem);
 }
 
 .home-item-list::before,
@@ -1158,13 +1160,13 @@ html {
 .page:hover .page-item-list {
   opacity: 1;
   visibility: visible;
-  top: 3.6rem;
+  top: calc(100% + 1.6rem);
 }
 
 .blog:hover .blog-item-list {
   opacity: 1;
   visibility: visible;
-  top: 3.6rem;
+  top: calc(100% + 1.6rem);
 }
 
 .home-item {
@@ -1187,12 +1189,6 @@ html {
 
 .home-item:hover {
   transform: translateX(1rem);
-}
-
-.home:hover .home-item-list {
-  opacity: 1;
-  visibility: visible;
-  top: 3.6rem;
 }
 
 .home_item_link_text {
@@ -1934,4 +1930,7 @@ a {
 .navbar_item_list_head .close {
   padding-right: 2.3rem;
   margin-right: 0;
+}
+.disabled {
+  pointer-events: none;
 }

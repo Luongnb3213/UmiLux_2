@@ -66,10 +66,12 @@
 }
 
 @media (max-width: 1199.5px) {
+
   .last{
     border: none;
   }
   .footer_help i{
+    cursor: pointer;
     font-size: 6px;
   }
   .footer_help i::before{
@@ -143,10 +145,14 @@
     color: var(--white-color);
    
   }
+  .icon{
+    cursor: pointer;
+  }
   .navbar_mobile i{
     vertical-align: middle;
   }
   .navbar_mobile {
+    cursor: pointer;
     padding-right: 20px;
   }
 

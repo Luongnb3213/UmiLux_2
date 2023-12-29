@@ -16,7 +16,7 @@ const main = document.querySelector("main");
 var body = document.querySelector("body");
 const header = document.querySelector("header");
 const layer_item = document.querySelector(".layer_item");
-const header_bot_left = document.querySelector(".header_bot_left");
+const header_bot_left_item = document.querySelector(".header_bot_left_item");
 
 /* ======================================== 
     NAVBARS BUTTONS
@@ -200,11 +200,11 @@ function item_slidein() {
 }
 
 var check1 = true;
-header_bot_left.onclick = function (e) {
+header_bot_left_item.onclick = function (e) {
   let dp_item_list = document.querySelector(".dp_item_list");
   let computedStyle = window.getComputedStyle(dp_item_list);
-  console.log(e.target)
-  if(e.target.closest(".header_bot_left_item")){
+   console.log(e.target)
+  if(e.target.closest(".header_bot_left_item") || e.target.closest(".header_bot_left")){
     dp_item_list.style.maxHeight =
     computedStyle.maxHeight === "0px" ? dp_item_list.scrollHeight + "px" : "0";
   if (check1) {
@@ -214,11 +214,10 @@ header_bot_left.onclick = function (e) {
         dp_item_list.classList.add("dp_item_list_shown");
       },
       { capture: false, once: true, passive: false }
-    );
+    ); 
 
     check1 = false;
   } else {
-    e.preventDefault();
     dp_item_list.classList.remove("dp_item_list_shown");
     check1 = true;
   }
@@ -231,8 +230,7 @@ header_bot_left.onclick = function (e) {
 if (layer_item) {
   layer_item.onclick = (e) => {
     if(e.target.classList.contains("layer_item")){
-      console.log("hi")
-      header_bot_left.click();
+      header_bot_left_item.click();
     }
    
   };
@@ -318,7 +316,7 @@ window.addEventListener("scroll", () => {
   let header_top_list = document.querySelector(".header-top-list");
   let computedStyle = window.getComputedStyle(header_top_list);
   header.classList.toggle("sticky", this.window.scrollY > 100);
-  header_top_list.classList.toggle("d-none", this.window.scrollY > 100);
+  header_top_list.classList.toggle("d-none", this.window.scrollY > 0);
 });
 
 /* ======================================== 
