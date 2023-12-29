@@ -203,7 +203,7 @@ var check1 = true;
 header_bot_left_item.onclick = function (e) {
   let dp_item_list = document.querySelector(".dp_item_list");
   let computedStyle = window.getComputedStyle(dp_item_list);
-   console.log(e.target)
+   
   if(e.target.closest(".header_bot_left_item") || e.target.closest(".header_bot_left")){
     dp_item_list.style.maxHeight =
     computedStyle.maxHeight === "0px" ? dp_item_list.scrollHeight + "px" : "0";

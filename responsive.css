@@ -95,6 +95,7 @@
      font-size: 18px;
   }
   .navbar_item_list_head{
+    cursor: pointer;
     padding-left: 30px;
   }
   .navbar_item_mobile{
@@ -150,7 +151,7 @@
   }
   .icon{
     position: relative;
-    top: 2px;
+    top: 3px;
     cursor: pointer;
   }
   .navbar_mobile i{
