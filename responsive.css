@@ -91,7 +91,7 @@
   .footer-list-padding{
     margin-top: 15px;
   }
-  .icon i::before{
+  .icon i{
      font-size: 18px;
   }
   .navbar_item_list_head{
@@ -140,12 +140,17 @@
   .rotate {
     transform: rotate(180deg);
   }
-  .navbar_mobile i::before{
-    font-size: 15px;
+  .navbar_mobile i{
+    font-size: 20px;
     color: var(--white-color);
    
   }
+  .navbar_mobile i::before{
+    font-size: 15px;
+  }
   .icon{
+    position: relative;
+    top: 2px;
     cursor: pointer;
   }
   .navbar_mobile i{
