@@ -255,21 +255,20 @@ html {
   height: 0%;
 }
 .header {
+  background-color: var(--primay-color);
+}
+.header.sticky {
   position: sticky;
   top: 0;
   z-index: 2;
-  background-color: var(--primay-color);
   box-shadow: 0 0.01rem 0.1rem rgba(0, 0, 0, 0.5);
   scroll-behavior: smooth;
-}
-.header.sticky {
-  animation: header_go_up 0.7s ease;
+  animation: header_go_up 0.5s ease;
 }
 @keyframes header_go_up {
   from {
     transform: translateY(-100%);
   }
-
   to {
     transform: none;
   }
@@ -1171,7 +1170,7 @@ html {
 
 .home-item {
   transition: all linear 0.2s;
-  padding: 1rem 4.8rem 1rem 3.5rem;
+  padding: 0.7rem 4.8rem 0.7rem 3.5rem;
 }
 
 .home_item_link {
