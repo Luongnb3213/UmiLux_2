@@ -255,6 +255,8 @@ html {
   height: 0%;
 }
 .header {
+  position: relative;
+  z-index: 2;
   background-color: var(--primay-color);
 }
 .header.sticky {
@@ -1221,6 +1223,7 @@ html {
   top: 110%;
   padding: 4rem 0px;
   transition: all linear 0.2s;
+  z-index: 3;
 }
 .product-item-list {
   padding: 3rem 0px 2rem 0px;
@@ -1242,6 +1245,9 @@ html {
   opacity: 1;
   visibility: visible;
   top: 100%;
+}
+.shop{
+  z-index: 3;
 }
 
 .shop_main_text {
